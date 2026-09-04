@@ -791,7 +791,7 @@
       </div>
     </div>
 
-    <!-- SOCIAL REPORT CHART: REGISTRATIONS VS FTDS (ONLY CHART) -->
+    <!-- SOCIAL REPORT CHART: REGISTRATIONS VS FTDS -->
     <div class="w-full">
       <div class="glass-card rounded-2xl p-6 flex flex-col justify-between min-h-[380px]">
         <div>
@@ -813,7 +813,7 @@
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 4: TEAM PERFORMANCE OVERVIEW -->
+    <!-- SECTION 4: TEAM PERFORMANCE OVERVIEW (NO KPIS) -->
     <!-- ======================================================== -->
 
     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 space-y-4 mt-8">
@@ -842,7 +842,7 @@
         </div>
       </div>
 
-      <!-- CANVAS (SINGLE COUNT Y-AXIS) -->
+      <!-- CANVAS (SINGLE COUNT Y-AXIS, NO KPIS) -->
       <div class="relative w-full h-80 sm:h-96">
         <canvas id="dailyTrendLineChart"></canvas>
       </div>
@@ -906,11 +906,11 @@
   <script>
     let trendChartInstance = null;
 
-    // Daily Trend Datasets (Sep 01 - 04) without Revenue
+    // Daily Trend Datasets (Sep 01 - 04) - Real data only, NO KPIs
     const trendDatasets = {
       // 1. MEDIA (MMR)
       media: {
-        yMax: 40,
+        yMax: 30,
         datasets: [
           {
             label: 'Media Registrations (Total: 65)',
@@ -935,26 +935,6 @@
             pointBackgroundColor: '#ec4899',
             yAxisID: 'y',
             tension: 0.05
-          },
-          {
-            label: 'KPI Signups (33.3/day)',
-            data: [33.3, 33.3, 33.3, 33.3],
-            borderColor: '#2563eb',
-            borderWidth: 2,
-            borderDash: [5, 4],
-            pointRadius: 0,
-            yAxisID: 'y',
-            fill: false
-          },
-          {
-            label: 'KPI Users (10/day)',
-            data: [10, 10, 10, 10],
-            borderColor: '#ec4899',
-            borderWidth: 2,
-            borderDash: [5, 4],
-            pointRadius: 0,
-            yAxisID: 'y',
-            fill: false
           }
         ]
       },
@@ -986,33 +966,13 @@
             pointBackgroundColor: '#ec4899',
             yAxisID: 'y',
             tension: 0.05
-          },
-          {
-            label: 'KPI Signups (16.7/day)',
-            data: [16.7, 16.7, 16.7, 16.7],
-            borderColor: '#2563eb',
-            borderWidth: 2,
-            borderDash: [5, 4],
-            pointRadius: 0,
-            yAxisID: 'y',
-            fill: false
-          },
-          {
-            label: 'KPI Users (1.3/day)',
-            data: [1.3, 1.3, 1.3, 1.3],
-            borderColor: '#ec4899',
-            borderWidth: 2,
-            borderDash: [5, 4],
-            pointRadius: 0,
-            yAxisID: 'y',
-            fill: false
           }
         ]
       },
 
       // 3. SOCIAL
       social: {
-        yMax: 20,
+        yMax: 10,
         datasets: [
           {
             label: 'Social Registrations (Total: 0)',
@@ -1037,26 +997,6 @@
             pointBackgroundColor: '#ec4899',
             yAxisID: 'y',
             tension: 0.05
-          },
-          {
-            label: 'KPI Registrations (8.3/day)',
-            data: [8.3, 8.3, 8.3, 8.3],
-            borderColor: '#2563eb',
-            borderWidth: 2,
-            borderDash: [5, 4],
-            pointRadius: 0,
-            yAxisID: 'y',
-            fill: false
-          },
-          {
-            label: 'KPI FTDs (0.7/day)',
-            data: [0.7, 0.7, 0.7, 0.7],
-            borderColor: '#ec4899',
-            borderWidth: 2,
-            borderDash: [5, 4],
-            pointRadius: 0,
-            yAxisID: 'y',
-            fill: false
           }
         ]
       },
