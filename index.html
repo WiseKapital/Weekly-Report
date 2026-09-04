@@ -351,7 +351,7 @@
             <tr class="hover:bg-slate-50/70">
               <td class="p-2.5 font-extrabold text-slate-900">LUM</td>
               <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
               <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
               <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
               <td class="p-2.5 text-center font-extrabold text-slate-900">1</td>
@@ -813,7 +813,7 @@
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 4: TEAM PERFORMANCE OVERVIEW (NO KPIS) -->
+    <!-- SECTION 4: TEAM PERFORMANCE OVERVIEW (REGISTRATIONS & FTD/USERS) -->
     <!-- ======================================================== -->
 
     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 space-y-4 mt-8">
@@ -842,7 +842,7 @@
         </div>
       </div>
 
-      <!-- CANVAS (SINGLE COUNT Y-AXIS, NO KPIS) -->
+      <!-- CANVAS (SINGLE COUNT Y-AXIS) -->
       <div class="relative w-full h-80 sm:h-96">
         <canvas id="dailyTrendLineChart"></canvas>
       </div>
@@ -906,7 +906,8 @@
   <script>
     let trendChartInstance = null;
 
-    // Daily Trend Datasets (Sep 01 - 04) - Real data only, NO KPIs
+    // Daily Trend Datasets (Sep 01 - 04)
+    // Standardized to "Registrations" & "FTD/Users" across all views
     const trendDatasets = {
       // 1. MEDIA (MMR)
       media: {
@@ -921,11 +922,10 @@
             pointRadius: 5,
             pointHoverRadius: 7,
             pointBackgroundColor: '#2563eb',
-            yAxisID: 'y',
             tension: 0.05
           },
           {
-            label: 'Media Users (Total: 3)',
+            label: 'Media FTD/Users (Total: 3)',
             data: [0, 0, 1, 2],
             borderColor: '#ec4899',
             backgroundColor: '#ec4899',
@@ -933,7 +933,6 @@
             pointRadius: 5,
             pointHoverRadius: 7,
             pointBackgroundColor: '#ec4899',
-            yAxisID: 'y',
             tension: 0.05
           }
         ]
@@ -944,7 +943,7 @@
         yMax: 40,
         datasets: [
           {
-            label: 'Email Signups (Total: 116)',
+            label: 'Email Registrations (Total: 116)',
             data: [27, 28, 29, 32],
             borderColor: '#2563eb',
             backgroundColor: '#2563eb',
@@ -952,11 +951,10 @@
             pointRadius: 5,
             pointHoverRadius: 7,
             pointBackgroundColor: '#2563eb',
-            yAxisID: 'y',
             tension: 0.05
           },
           {
-            label: 'Email Users (Total: 5)',
+            label: 'Email FTD/Users (Total: 5)',
             data: [1, 1, 1, 2],
             borderColor: '#ec4899',
             backgroundColor: '#ec4899',
@@ -964,7 +962,6 @@
             pointRadius: 5,
             pointHoverRadius: 7,
             pointBackgroundColor: '#ec4899',
-            yAxisID: 'y',
             tension: 0.05
           }
         ]
@@ -983,11 +980,10 @@
             pointRadius: 5,
             pointHoverRadius: 7,
             pointBackgroundColor: '#2563eb',
-            yAxisID: 'y',
             tension: 0.05
           },
           {
-            label: 'Social FTDs (Total: 0)',
+            label: 'Social FTD/Users (Total: 0)',
             data: [0, 0, 0, 0],
             borderColor: '#ec4899',
             backgroundColor: '#ec4899',
@@ -995,36 +991,60 @@
             pointRadius: 5,
             pointHoverRadius: 7,
             pointBackgroundColor: '#ec4899',
-            yAxisID: 'y',
             tension: 0.05
           }
         ]
       },
 
-      // 4. ALL CHANNELS COMPARISON
+      // 4. ALL CHANNELS (COMPARING THE 3 CAMPAIGNS WITH REGISTRATIONS & FTD/USERS)
       comparison: {
         yMax: 40,
         datasets: [
+          // Email
           {
-            label: 'Email Signups (116)',
+            label: 'Email Registrations (116)',
             data: [27, 28, 29, 32],
             borderColor: '#2563eb',
             backgroundColor: '#2563eb',
             borderWidth: 2.5,
             pointRadius: 5,
-            yAxisID: 'y',
+            pointStyle: 'circle',
             tension: 0.05
           },
           {
-            label: 'Media Signups (65)',
+            label: 'Email FTD/Users (5)',
+            data: [1, 1, 1, 2],
+            borderColor: '#2563eb',
+            backgroundColor: '#2563eb',
+            borderWidth: 2,
+            borderDash: [5, 4],
+            pointRadius: 5,
+            pointStyle: 'rectRot',
+            tension: 0.05
+          },
+          // Media
+          {
+            label: 'Media Registrations (65)',
             data: [13, 14, 14, 24],
             borderColor: '#10b981',
             backgroundColor: '#10b981',
             borderWidth: 2.5,
             pointRadius: 5,
-            yAxisID: 'y',
+            pointStyle: 'circle',
             tension: 0.05
           },
+          {
+            label: 'Media FTD/Users (3)',
+            data: [0, 0, 1, 2],
+            borderColor: '#10b981',
+            backgroundColor: '#10b981',
+            borderWidth: 2,
+            borderDash: [5, 4],
+            pointRadius: 5,
+            pointStyle: 'rectRot',
+            tension: 0.05
+          },
+          // Social
           {
             label: 'Social Registrations (0)',
             data: [0, 0, 0, 0],
@@ -1032,7 +1052,18 @@
             backgroundColor: '#a855f7',
             borderWidth: 2.5,
             pointRadius: 5,
-            yAxisID: 'y',
+            pointStyle: 'circle',
+            tension: 0.05
+          },
+          {
+            label: 'Social FTD/Users (0)',
+            data: [0, 0, 0, 0],
+            borderColor: '#a855f7',
+            backgroundColor: '#a855f7',
+            borderWidth: 2,
+            borderDash: [5, 4],
+            pointRadius: 5,
+            pointStyle: 'rectRot',
             tension: 0.05
           }
         ]
@@ -1083,7 +1114,7 @@
             labels: [],
             datasets: [
               { label: 'Registrations', data: [], backgroundColor: 'rgba(245, 158, 11, 0.85)', borderRadius: 6 },
-              { label: 'FTDs', data: [], backgroundColor: 'rgba(139, 92, 246, 0.85)', borderRadius: 6 }
+              { label: 'FTD/Users', data: [], backgroundColor: 'rgba(139, 92, 246, 0.85)', borderRadius: 6 }
             ]
           },
           options: { 
@@ -1128,9 +1159,8 @@
                 align: 'center',
                 labels: {
                   usePointStyle: true,
-                  pointStyle: 'circle',
                   boxWidth: 8,
-                  padding: 18,
+                  padding: 16,
                   font: {
                     family: "'Inter', sans-serif",
                     size: 11,
