@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>September 01 - 04 - Marketing & Media Performance Dashboard</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ebf1f6;
+      color: #1e293b;
+    }
+    
+    .bg-mint-header { background-color: #eaf3ed; }
+    .theme-header-aff { background-color: #1e293b; }
+    
+    .text-green-custom { color: #00b074; }
+    .text-red-custom { color: #e11d48; }
+    .bg-green-custom { background-color: #00e676; }
+    .bg-blue-custom { background-color: #1e60f2; }
+    .bg-purple-custom { background-color: #a855f7; }
+
+    /* Custom Scrollbar */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    /* Grid borders for tables */
+    table.table-grid,
+    table.table-grid th,
+    table.table-grid td {
+      border: 1px solid #e2e8f0;
+      border-collapse: collapse;
+    }
+
+    .excel-table {
+      border-collapse: collapse !important;
+      border: 1px solid #cbd5e1 !important;
+      width: 100%;
+    }
+    .excel-table th, 
+    .excel-table td {
+      border: 1px solid #cbd5e1 !important;
+    }
+    .excel-table thead th {
+      border: 1px solid #1e293b !important;
+    }
+
+    /* Glass card */
+    .glass-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+    }
+    .glass-card:hover {
+      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    }
+  </style>
+</head>
+<body class="p-4 md:p-6 min-h-screen">
+
+  <div class="max-w-[1400px] mx-auto space-y-6">
+
+    <!-- ======================================================== -->
+    <!-- SECTION 1: MMR MEDIA MANAGEMENT REPORT -->
+    <!-- ======================================================== -->
+
+    <!-- TOP HEADER -->
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-3">
+      <h1 class="text-xl font-extrabold text-slate-900 tracking-tight">MMR Media Management Report</h1>
+      <span class="bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded-full">September 01 - 04</span>
+    </div>
+
+    <!-- TOP METRIC CARDS (3 COLS) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      
+      <!-- LEADS (CPL) MTD -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">LEADS (CPL) MTD</span>
+          <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center text-sm">
+            <i class="fa-regular fa-eye"></i>
+          </div>
+        </div>
+        <div class="my-3 flex items-baseline gap-1.5">
+          <span class="text-4xl font-black text-slate-900 tracking-tight">1351</span>
+          <span class="text-xs font-bold text-slate-500">MTD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
+            <span class="text-slate-400">KPI</span> <span class="font-extrabold text-slate-800 ml-1">4000</span>
+          </span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
+            <span class="text-slate-400">RR</span> <span class="font-extrabold text-green-custom ml-1">10132</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- SIGNUPS (CPR) MTD -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">SIGNUPS (CPR) MTD</span>
+          <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center text-sm">
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </div>
+        <div class="my-3 flex items-baseline gap-1.5">
+          <span class="text-4xl font-black text-slate-900 tracking-tight">65</span>
+          <span class="text-xs font-bold text-slate-500">MTD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
+            <span class="text-slate-400">KPI</span> <span class="font-extrabold text-slate-800 ml-1">1000</span>
+          </span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
+            <span class="text-slate-400">RR</span> <span class="font-extrabold text-red-custom ml-1">489</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- USERS (CPA) MTD -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">USERS (CPA) MTD</span>
+          <div class="w-8 h-8 rounded-full bg-purple-50 text-purple-500 flex items-center justify-center text-sm">
+            <i class="fa-regular fa-user"></i>
+          </div>
+        </div>
+        <div class="my-3 flex items-baseline gap-1.5">
+          <span class="text-4xl font-black text-slate-900 tracking-tight">3</span>
+          <span class="text-xs font-bold text-slate-500">MTD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
+            <span class="text-slate-400">KPI</span> <span class="font-extrabold text-slate-800 ml-1">300</span>
+          </span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
+            <span class="text-slate-400">RR</span> <span class="font-extrabold text-red-custom ml-1">23</span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MIDDLE PROGRESS CHARTS (3 COLS) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      
+      <!-- CPL BY PARTNER (MTD) -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 h-[280px]">
+        <h3 class="text-xs font-extrabold uppercase text-slate-900 tracking-wider mb-4">CPL BY PARTNER (MTD)</h3>
+        <div class="space-y-3.5">
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>FXM</span><span>1014</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-green-custom h-full" style="width: 100%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>LGL</span><span>211</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-green-custom h-full" style="width: 21%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>ADM</span><span>126</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-green-custom h-full" style="width: 12.5%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REGISTRATIONS BY PARTNER (MTD) -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 h-[280px] flex flex-col">
+        <h3 class="text-xs font-extrabold uppercase text-slate-900 tracking-wider mb-4">REGISTRATIONS BY PARTNER (MTD)</h3>
+        <div class="space-y-2.5 overflow-y-auto pr-2 custom-scrollbar flex-1">
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>---</span><span>18</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 100%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>MON</span><span>11</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 61%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>PRO</span><span>6</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 33%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>ADM</span><span>5</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 27%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>VENE</span><span>2</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 11%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>SDG</span><span>2</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 11%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>LUM</span><span>1</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 5.5%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>EPV</span><span>1</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 5.5%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>MOD</span><span>1</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 5.5%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CPA BY PARTNER (MTD) -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 h-[280px]">
+        <h3 class="text-xs font-extrabold uppercase text-slate-900 tracking-wider mb-4">CPA BY PARTNER (MTD)</h3>
+        <div class="space-y-3.5">
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>PRO</span><span>2</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-purple-custom h-full" style="width: 100%;"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-extrabold"><span>SPX</span><span>1</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-purple-custom h-full" style="width: 50%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MAIN TABLE -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs table-grid">
+          <thead>
+            <tr class="bg-mint-header text-slate-800 font-extrabold">
+              <th rowspan="2" class="p-3 uppercase tracking-wider align-middle w-36">MEDIA PARTNER</th>
+              <th colspan="3" class="p-2.5 uppercase tracking-wider text-center">CPL</th>
+              <th colspan="3" class="p-2.5 uppercase tracking-wider text-center">REGISTRATIONS</th>
+              <th colspan="3" class="p-2.5 uppercase tracking-wider text-center">CPA</th>
+              <th rowspan="2" class="p-3 uppercase tracking-wider text-center align-middle">REVENUE</th>
+              <th rowspan="2" class="p-3 uppercase tracking-wider text-center align-middle">BUDGET</th>
+              <th rowspan="2" class="p-3 uppercase tracking-wider text-center align-middle">PROFIT</th>
+            </tr>
+            <tr class="bg-mint-header text-slate-600 font-bold text-center">
+              <th class="py-1.5 px-3">KPI</th>
+              <th class="py-1.5 px-3">MTD</th>
+              <th class="py-1.5 px-3">RR</th>
+              <th class="py-1.5 px-3">KPI</th>
+              <th class="py-1.5 px-3">MTD</th>
+              <th class="py-1.5 px-3">RR</th>
+              <th class="py-1.5 px-3">KPI</th>
+              <th class="py-1.5 px-3">MTD</th>
+              <th class="py-1.5 px-3">RR</th>
+            </tr>
+          </thead>
+          <tbody class="font-semibold text-slate-700">
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">ADM</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">1333</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">126</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">945</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">5</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">38</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">6</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">-6</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">EPV</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">1</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">8</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">FXM</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">1334</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">1014</td>
+              <td class="p-2.5 text-center text-green-custom font-extrabold">7605</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">120</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">-120</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">LGL</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">1333</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">211</td>
+              <td class="p-2.5 text-center text-green-custom font-extrabold">1582</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">18</td>
+              <td class="p-2.5 text-center text-green-custom font-extrabold">135</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">33</td>
+              <td class="p-2.5 text-red-custom font-extrabold">-33</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">LUM</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">1</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">8</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">MOD</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">500</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">1</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">8</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">MON</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">11</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">82</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">PRO</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">6</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">45</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">150</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">2</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">15</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">300</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-green-custom font-extrabold">300</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">SDG</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">2</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">15</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">SPX</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">18</td>
+              <td class="p-2.5 text-center text-green-custom font-extrabold">135</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">150</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">1</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">8</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">220</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center text-green-custom font-extrabold">220</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="p-2.5 font-extrabold text-slate-900">VENE</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">2</td>
+              <td class="p-2.5 text-center text-red-custom font-extrabold">15</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="bg-white font-black text-slate-900 border-t-2 border-slate-300">
+              <td class="p-3 font-extrabold">Grand total</td>
+              <td class="p-3 text-center text-slate-400 italic font-bold">4000</td>
+              <td class="p-3 text-center font-black text-slate-900">1351</td>
+              <td class="p-3 text-center text-green-custom font-black">10132</td>
+              <td class="p-3 text-center text-slate-400 italic font-bold">1000</td>
+              <td class="p-3 text-center font-black text-slate-900">65</td>
+              <td class="p-3 text-center text-red-custom font-black">489</td>
+              <td class="p-3 text-center text-slate-400 italic font-bold">300</td>
+              <td class="p-3 text-center font-black text-slate-900">3</td>
+              <td class="p-3 text-center text-red-custom font-black">23</td>
+              <td class="p-3 text-center font-black text-slate-900">520</td>
+              <td class="p-3 text-center font-black text-slate-900">159</td>
+              <td class="p-3 text-center text-green-custom font-black">+361</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 2: EMAIL REPORT SEPTEMBER 01 - 04 -->
+    <!-- ======================================================== -->
+
+    <!-- TOP HEADER -->
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-3 mt-8">
+      <h2 class="text-xl font-extrabold text-slate-900 tracking-tight">Email report September 01 - 04</h2>
+    </div>
+
+    <!-- AFFILIATE KPI CARDS -->
+    <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Sign Ups</p>
+          <p class="text-3xl font-bold text-amber-600 mt-1">116</p>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="text-xs font-bold text-slate-900">KPI: 500</span>
+            <span class="text-xs text-slate-300">•</span>
+            <span class="text-xs font-bold text-emerald-600">RR: 870</span>
+          </div>
+        </div>
+        <div class="p-3 bg-amber-50 rounded-xl">
+          <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+        </div>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Users</p>
+          <p class="text-3xl font-bold text-indigo-600 mt-1">5</p>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="text-xs font-bold text-slate-900">KPI: 40</span>
+            <span class="text-xs text-slate-300">•</span>
+            <span class="text-xs font-bold text-rose-600">RR: 38</span>
+          </div>
+        </div>
+        <div class="p-3 bg-indigo-50 rounded-xl">
+          <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        </div>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Revenue</p>
+          <p class="text-3xl font-bold text-emerald-600 mt-1">$800</p>
+          <span class="text-xs text-slate-500 font-medium">Total Generated MTD</span>
+        </div>
+        <div class="p-3 bg-emerald-50 rounded-xl">
+          <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADVERTISER BREAKDOWN TABLE -->
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+        <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wider">Advertiser Breakdown Table</h3>
+        <span class="text-xs font-medium text-slate-500">Metrics: Conversion S2P Ratio (1:X) &amp; Revenue</span>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-right excel-table">
+          <thead class="theme-header-aff text-white text-xs uppercase tracking-wider font-semibold">
+            <tr>
+              <th class="py-3 px-4 text-left">Advertiser</th>
+              <th class="py-3 px-4 text-center">Sign Ups</th>
+              <th class="py-3 px-4 text-center">Users</th>
+              <th class="py-3 px-4 text-center">Revenue</th>
+              <th class="py-3 px-4 text-center">S2P (Ratio)</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-700">
+            <tr class="hover:bg-slate-50 bg-white">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">GameTime Digital</td>
+              <td class="py-2.5 px-4 text-center font-mono font-bold text-amber-600">111</td>
+              <td class="py-2.5 px-4 text-center font-mono font-bold text-indigo-600">4</td>
+              <td class="py-2.5 px-4 text-center font-mono font-bold text-emerald-600">$680</td>
+              <td class="py-2.5 px-4 text-center font-mono font-semibold text-emerald-600">1:28</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-slate-50/40">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">Basher Agency</td>
+              <td class="py-2.5 px-4 text-center font-mono font-semibold">4</td>
+              <td class="py-2.5 px-4 text-center font-mono font-bold text-indigo-600">1</td>
+              <td class="py-2.5 px-4 text-center font-mono font-bold text-emerald-600">$120</td>
+              <td class="py-2.5 px-4 text-center font-mono font-semibold text-emerald-600">1:4</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-white">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">AFF 66</td>
+              <td class="py-2.5 px-4 text-center font-mono font-semibold">1</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:1</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-slate-50/40">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">CHANCED</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:0</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-white">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">Splash</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:0</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-slate-50/40">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">ALL IN AFFILIATES</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:0</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-white">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">Acebet</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:0</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-slate-50/40">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">CoinsRoyale</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:0</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-white">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">EPC</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:0</td>
+            </tr>
+          </tbody>
+          <tfoot class="border-t-2 border-slate-900 bg-slate-50 font-bold text-slate-900">
+            <tr>
+              <td class="py-2.5 px-4 text-left font-bold">Grand total</td>
+              <td class="py-2.5 px-4 text-center font-mono text-amber-600 font-bold">116</td>
+              <td class="py-2.5 px-4 text-center font-mono text-indigo-600 font-bold">5</td>
+              <td class="py-2.5 px-4 text-center font-mono text-emerald-600 font-bold">$800</td>
+              <td class="py-2.5 px-4 text-center font-mono text-emerald-600 font-bold">1:23</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 3: SOCIAL REPORT + COINS ROYALE LOGO -->
+    <!-- ======================================================== -->
+
+    <!-- TOP HEADER -->
+    <header class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 mt-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- LOGO + TITLE (TOP LEFT) -->
+        <div class="flex items-center gap-4 sm:gap-6">
+          <div class="flex-shrink-0 cursor-pointer">
+            <!-- COINS ROYALE OFFICIAL SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 92" class="h-10 sm:h-11 w-auto select-none" style="filter: drop-shadow(0px 6px 12px rgba(22, 11, 44, 0.42));">
+              <g stroke="#160B2C" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <path d="M 21,50 L 13,24 L 28,37 L 36,15 L 48,31 L 53,8 L 58,31 L 70,15 L 78,37 L 93,24 L 85,50" />
+                <ellipse cx="53" cy="52" rx="32" ry="8.5" />
+                <path d="M 23, 60 C 18, 69 27, 78 53, 78 C 79, 78 88, 69 83, 60" />
+                <path d="M 28, 70 C 19, 77 24, 87 53, 87 C 80, 87 88, 79 85, 71" />
+              </g>
+              <text x="110" y="47" font-family="'Outfit', -apple-system, sans-serif" font-weight="900" font-size="44" letter-spacing="0.5" fill="#FFFFFF" stroke="#160B2C" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round" style="paint-order: stroke fill;">COINS ROYALE</text>
+              <text x="168" y="74" font-family="'Outfit', 'Inter', sans-serif" font-weight="600" font-size="19" letter-spacing="5.2" fill="#FFFFFF">SOCIAL CASINO</text>
+            </svg>
+          </div>
+
+          <div class="h-8 w-px bg-slate-200 hidden md:block"></div>
+
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-display font-bold text-slate-800 text-sm tracking-tight">Social Report</span>
+              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span> Active
+              </span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium">September 01 - 04</p>
+          </div>
+        </div>
+
+        <!-- CAMPAIGN FILTER -->
+        <div class="hidden sm:flex items-center gap-3">
+          <div class="relative">
+            <i data-lucide="filter" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <select class="pl-9 pr-8 py-1.5 text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition cursor-pointer appearance-none shadow-sm">
+              <option value="all">All Campaigns</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- 5 KPI CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <!-- 1. Amount Spent -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-indigo-500 transition">
+        <div class="flex items-center justify-between text-slate-500 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Amount Spent</span>
+          <div class="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+            <i data-lucide="wallet" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight">$0</div>
+        <div class="flex items-center gap-1.5 flex-wrap mt-2">
+          <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: $1,100</span>
+          <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-slate-50 text-slate-600 border-slate-200">RR: $0</span>
+        </div>
+      </div>
+
+      <!-- 2. Revenue -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-emerald-500 transition">
+        <div class="flex items-center justify-between text-slate-500 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Revenue</span>
+          <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+            <i data-lucide="dollar-sign" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight">$0</div>
+        <div class="flex items-center gap-1.5 flex-wrap mt-2">
+          <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: $3,300</span>
+          <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-slate-50 text-slate-600 border-slate-200">RR: $0</span>
+        </div>
+      </div>
+
+      <!-- 3. Net Profit -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-teal-500 transition">
+        <div class="flex items-center justify-between text-slate-500 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Net Profit</span>
+          <div class="w-7 h-7 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center">
+            <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight">$0</div>
+        <div class="flex items-center gap-1.5 flex-wrap mt-2">
+          <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: $2,200</span>
+          <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-slate-50 text-slate-600 border-slate-200">RR: $0</span>
+        </div>
+      </div>
+
+      <!-- 4. Registrations -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-amber-500 transition">
+        <div class="flex items-center justify-between text-slate-500 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Registrations</span>
+          <div class="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+            <i data-lucide="user-plus" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight">0</div>
+        <div class="flex items-center gap-1.5 flex-wrap mt-2">
+          <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: 250</span>
+          <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-slate-50 text-slate-600 border-slate-200">RR: 0</span>
+        </div>
+      </div>
+
+      <!-- 5. FTDs -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-purple-500 transition">
+        <div class="flex items-center justify-between text-slate-500 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">FTDs</span>
+          <div class="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center">
+            <i data-lucide="badge-check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight">0</div>
+        <div class="flex items-center gap-1.5 flex-wrap mt-2">
+          <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: 20</span>
+          <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-slate-50 text-slate-600 border-slate-200">RR: 0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONSOLIDATED SUMMARY TABLE -->
+    <div class="glass-card rounded-2xl overflow-hidden border border-slate-300 shadow-sm">
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-left border-collapse">
+          <thead>
+            <tr class="bg-[#E2F0D9] border-b-2 border-slate-300">
+              <th colspan="6" class="py-2.5 px-4 text-center font-bold text-[#276A3C] text-sm tracking-wide">
+                September 01-04 Performance Summary (Campaign Consolidated)
+              </th>
+            </tr>
+            <tr class="bg-[#D9EAD3] border-b border-slate-300 text-slate-900 font-bold">
+              <th class="py-2.5 px-4 border-r border-slate-300">Campaign</th>
+              <th class="py-2.5 px-4 text-right border-r border-slate-300">Amount Spent</th>
+              <th class="py-2.5 px-4 text-right border-r border-slate-300">Revenue</th>
+              <th class="py-2.5 px-4 text-right border-r border-slate-300">Registrations</th>
+              <th class="py-2.5 px-4 text-right border-r border-slate-300">FTDs</th>
+              <th class="py-2.5 px-4 text-right">S2P</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-800 bg-white">
+            <tr>
+              <td colspan="6" class="py-8"></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="bg-[#D9EAD3] border-t-2 border-slate-300 font-bold text-slate-900 text-xs">
+              <td class="py-2.5 px-4 border-r border-slate-300">Total:</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">$0.00</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300 font-bold">$0.00</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">0</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">0</td>
+              <td class="py-2.5 px-4 text-right font-mono font-bold">-:-</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <!-- SOCIAL REPORT CHART: REGISTRATIONS VS FTDS (ONLY CHART) -->
+    <div class="w-full">
+      <div class="glass-card rounded-2xl p-6 flex flex-col justify-between min-h-[380px]">
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <h2 class="text-base font-bold font-display text-slate-900">Registrations vs. FTDs</h2>
+            <div class="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+              <i data-lucide="users" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500 mb-4">Acquisition volume vs conversion</p>
+        </div>
+        <div class="relative h-64 sm:h-72 w-full">
+          <canvas id="conversionBarChart"></canvas>
+        </div>
+        <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-center text-slate-400">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 4: TEAM PERFORMANCE OVERVIEW -->
+    <!-- ======================================================== -->
+
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 space-y-4 mt-8">
+      
+      <!-- CONTROLS & SECTION SELECTOR -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
+        <div>
+          <h3 class="text-base font-bold text-slate-900">Team Performance Overview</h3>
+          <p class="text-xs text-slate-500 font-medium">Registrations and FTD/Users by day (Sep 01 - 04).</p>
+        </div>
+
+        <!-- SECTION TABS (MEDIA / EMAIL / SOCIAL / ALL CHANNELS) -->
+        <div class="flex flex-wrap items-center gap-1.5 bg-slate-100 p-1 rounded-xl">
+          <button onclick="setTrendView('media')" id="btn-trend-media" class="px-3 py-1.5 text-xs font-bold rounded-lg transition bg-slate-900 text-white shadow-sm">
+            Media (MMR)
+          </button>
+          <button onclick="setTrendView('email')" id="btn-trend-email" class="px-3 py-1.5 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-200">
+            Email
+          </button>
+          <button onclick="setTrendView('social')" id="btn-trend-social" class="px-3 py-1.5 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-200">
+            Social
+          </button>
+          <button onclick="setTrendView('comparison')" id="btn-trend-comparison" class="px-3 py-1.5 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-200">
+            All Channels
+          </button>
+        </div>
+      </div>
+
+      <!-- CANVAS (SINGLE COUNT Y-AXIS) -->
+      <div class="relative w-full h-80 sm:h-96">
+        <canvas id="dailyTrendLineChart"></canvas>
+      </div>
+
+    </div>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 5: 3 DOUGHNUT CHARTS (3 CHANNEL SHARES) -->
+    <!-- ======================================================== -->
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      
+      <!-- 1. REGISTRATIONS SHARE -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between min-h-[380px]">
+        <div>
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Registrations Share</h3>
+            <span class="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full">Total: 181</span>
+          </div>
+          <p class="text-xs text-slate-400 font-medium mt-0.5 mb-2">Combination of Media, Email &amp; Social</p>
+        </div>
+        <div class="relative h-60 flex items-center justify-center w-full">
+          <canvas id="chartRegShare"></canvas>
+        </div>
+      </div>
+
+      <!-- 2. USERS SHARE -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between min-h-[380px]">
+        <div>
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Users Share</h3>
+            <span class="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full">Total: 8</span>
+          </div>
+          <p class="text-xs text-slate-400 font-medium mt-0.5 mb-2">Combination of Media, Email &amp; Social</p>
+        </div>
+        <div class="relative h-60 flex items-center justify-center w-full">
+          <canvas id="chartUsersShare"></canvas>
+        </div>
+      </div>
+
+      <!-- 3. REVENUE SHARE -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between min-h-[380px]">
+        <div>
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Revenue Share</h3>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">Total: $1,320</span>
+          </div>
+          <p class="text-xs text-slate-400 font-medium mt-0.5 mb-2">Combination of Media, Email &amp; Social</p>
+        </div>
+        <div class="relative h-60 flex items-center justify-center w-full">
+          <canvas id="chartRevenueShare"></canvas>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPTS: CHART.JS & LUCIDE -->
+  <script>
+    let trendChartInstance = null;
+
+    // Daily Trend Datasets (Sep 01 - 04) without Revenue
+    const trendDatasets = {
+      // 1. MEDIA (MMR)
+      media: {
+        yMax: 40,
+        datasets: [
+          {
+            label: 'Media Registrations (Total: 65)',
+            data: [13, 14, 14, 24],
+            borderColor: '#2563eb',
+            backgroundColor: '#2563eb',
+            borderWidth: 2.2,
+            pointRadius: 5,
+            pointHoverRadius: 7,
+            pointBackgroundColor: '#2563eb',
+            yAxisID: 'y',
+            tension: 0.05
+          },
+          {
+            label: 'Media Users (Total: 3)',
+            data: [0, 0, 1, 2],
+            borderColor: '#ec4899',
+            backgroundColor: '#ec4899',
+            borderWidth: 2.2,
+            pointRadius: 5,
+            pointHoverRadius: 7,
+            pointBackgroundColor: '#ec4899',
+            yAxisID: 'y',
+            tension: 0.05
+          },
+          {
+            label: 'KPI Signups (33.3/day)',
+            data: [33.3, 33.3, 33.3, 33.3],
+            borderColor: '#2563eb',
+            borderWidth: 2,
+            borderDash: [5, 4],
+            pointRadius: 0,
+            yAxisID: 'y',
+            fill: false
+          },
+          {
+            label: 'KPI Users (10/day)',
+            data: [10, 10, 10, 10],
+            borderColor: '#ec4899',
+            borderWidth: 2,
+            borderDash: [5, 4],
+            pointRadius: 0,
+            yAxisID: 'y',
+            fill: false
+          }
+        ]
+      },
+
+      // 2. EMAIL
+      email: {
+        yMax: 40,
+        datasets: [
+          {
+            label: 'Email Signups (Total: 116)',
+            data: [27, 28, 29, 32],
+            borderColor: '#2563eb',
+            backgroundColor: '#2563eb',
+            borderWidth: 2.2,
+            pointRadius: 5,
+            pointHoverRadius: 7,
+            pointBackgroundColor: '#2563eb',
+            yAxisID: 'y',
+            tension: 0.05
+          },
+          {
+            label: 'Email Users (Total: 5)',
+            data: [1, 1, 1, 2],
+            borderColor: '#ec4899',
+            backgroundColor: '#ec4899',
+            borderWidth: 2.2,
+            pointRadius: 5,
+            pointHoverRadius: 7,
+            pointBackgroundColor: '#ec4899',
+            yAxisID: 'y',
+            tension: 0.05
+          },
+          {
+            label: 'KPI Signups (16.7/day)',
+            data: [16.7, 16.7, 16.7, 16.7],
+            borderColor: '#2563eb',
+            borderWidth: 2,
+            borderDash: [5, 4],
+            pointRadius: 0,
+            yAxisID: 'y',
+            fill: false
+          },
+          {
+            label: 'KPI Users (1.3/day)',
+            data: [1.3, 1.3, 1.3, 1.3],
+            borderColor: '#ec4899',
+            borderWidth: 2,
+            borderDash: [5, 4],
+            pointRadius: 0,
+            yAxisID: 'y',
+            fill: false
+          }
+        ]
+      },
+
+      // 3. SOCIAL
+      social: {
+        yMax: 20,
+        datasets: [
+          {
+            label: 'Social Registrations (Total: 0)',
+            data: [0, 0, 0, 0],
+            borderColor: '#2563eb',
+            backgroundColor: '#2563eb',
+            borderWidth: 2.2,
+            pointRadius: 5,
+            pointHoverRadius: 7,
+            pointBackgroundColor: '#2563eb',
+            yAxisID: 'y',
+            tension: 0.05
+          },
+          {
+            label: 'Social FTDs (Total: 0)',
+            data: [0, 0, 0, 0],
+            borderColor: '#ec4899',
+            backgroundColor: '#ec4899',
+            borderWidth: 2.2,
+            pointRadius: 5,
+            pointHoverRadius: 7,
+            pointBackgroundColor: '#ec4899',
+            yAxisID: 'y',
+            tension: 0.05
+          },
+          {
+            label: 'KPI Registrations (8.3/day)',
+            data: [8.3, 8.3, 8.3, 8.3],
+            borderColor: '#2563eb',
+            borderWidth: 2,
+            borderDash: [5, 4],
+            pointRadius: 0,
+            yAxisID: 'y',
+            fill: false
+          },
+          {
+            label: 'KPI FTDs (0.7/day)',
+            data: [0.7, 0.7, 0.7, 0.7],
+            borderColor: '#ec4899',
+            borderWidth: 2,
+            borderDash: [5, 4],
+            pointRadius: 0,
+            yAxisID: 'y',
+            fill: false
+          }
+        ]
+      },
+
+      // 4. ALL CHANNELS COMPARISON
+      comparison: {
+        yMax: 40,
+        datasets: [
+          {
+            label: 'Email Signups (116)',
+            data: [27, 28, 29, 32],
+            borderColor: '#2563eb',
+            backgroundColor: '#2563eb',
+            borderWidth: 2.5,
+            pointRadius: 5,
+            yAxisID: 'y',
+            tension: 0.05
+          },
+          {
+            label: 'Media Signups (65)',
+            data: [13, 14, 14, 24],
+            borderColor: '#10b981',
+            backgroundColor: '#10b981',
+            borderWidth: 2.5,
+            pointRadius: 5,
+            yAxisID: 'y',
+            tension: 0.05
+          },
+          {
+            label: 'Social Registrations (0)',
+            data: [0, 0, 0, 0],
+            borderColor: '#a855f7',
+            backgroundColor: '#a855f7',
+            borderWidth: 2.5,
+            pointRadius: 5,
+            yAxisID: 'y',
+            tension: 0.05
+          }
+        ]
+      }
+    };
+
+    // Toggle views in Team Performance Overview
+    function setTrendView(viewName) {
+      const btnMedia = document.getElementById('btn-trend-media');
+      const btnEmail = document.getElementById('btn-trend-email');
+      const btnSocial = document.getElementById('btn-trend-social');
+      const btnComparison = document.getElementById('btn-trend-comparison');
+
+      const activeClasses = "px-3 py-1.5 text-xs font-bold rounded-lg transition bg-slate-900 text-white shadow-sm";
+      const inactiveClasses = "px-3 py-1.5 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-200";
+
+      btnMedia.className = inactiveClasses;
+      btnEmail.className = inactiveClasses;
+      btnSocial.className = inactiveClasses;
+      btnComparison.className = inactiveClasses;
+
+      if (viewName === 'media') btnMedia.className = activeClasses;
+      if (viewName === 'email') btnEmail.className = activeClasses;
+      if (viewName === 'social') btnSocial.className = activeClasses;
+      if (viewName === 'comparison') btnComparison.className = activeClasses;
+
+      if (trendChartInstance && trendDatasets[viewName]) {
+        trendChartInstance.data.datasets = trendDatasets[viewName].datasets;
+        trendChartInstance.options.scales.y.max = trendDatasets[viewName].yMax;
+        trendChartInstance.update();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Lucide Icons
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // ==========================================
+      // SECTION 3: SOCIAL REPORT CHART (BAR CHART ONLY)
+      // ==========================================
+      const ctxConversion = document.getElementById('conversionBarChart');
+      if (ctxConversion) {
+        new Chart(ctxConversion.getContext('2d'), {
+          type: 'bar',
+          data: {
+            labels: [],
+            datasets: [
+              { label: 'Registrations', data: [], backgroundColor: 'rgba(245, 158, 11, 0.85)', borderRadius: 6 },
+              { label: 'FTDs', data: [], backgroundColor: 'rgba(139, 92, 246, 0.85)', borderRadius: 6 }
+            ]
+          },
+          options: { 
+            responsive: true, 
+            maintainAspectRatio: false, 
+            plugins: { 
+              legend: { 
+                position: 'top',
+                labels: { font: { family: "'Inter', sans-serif", size: 11 } }
+              } 
+            },
+            scales: {
+              y: {
+                ticks: { font: { family: "'Inter', sans-serif", size: 11 } }
+              }
+            }
+          }
+        });
+      }
+
+      // ==========================================
+      // SECTION 4: TEAM TREND LINE CHART
+      // ==========================================
+      const ctxTrend = document.getElementById('dailyTrendLineChart');
+      if (ctxTrend) {
+        trendChartInstance = new Chart(ctxTrend.getContext('2d'), {
+          type: 'line',
+          data: {
+            labels: ['Sep 1', 'Sep 2', 'Sep 3', 'Sep 4'],
+            datasets: trendDatasets.media.datasets
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+              mode: 'index',
+              intersect: false
+            },
+            plugins: {
+              legend: {
+                position: 'top',
+                align: 'center',
+                labels: {
+                  usePointStyle: true,
+                  pointStyle: 'circle',
+                  boxWidth: 8,
+                  padding: 18,
+                  font: {
+                    family: "'Inter', sans-serif",
+                    size: 11,
+                    weight: '500'
+                  },
+                  color: '#334155'
+                }
+              },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                padding: 10,
+                cornerRadius: 8,
+                titleFont: { family: "'Inter', sans-serif", size: 12, weight: 'bold' },
+                bodyFont: { family: "'Inter', sans-serif", size: 11 }
+              }
+            },
+            scales: {
+              y: {
+                type: 'linear',
+                position: 'left',
+                beginAtZero: true,
+                min: 0,
+                max: trendDatasets.media.yMax,
+                ticks: {
+                  stepSize: 5,
+                  font: { family: "'Inter', sans-serif", size: 11 },
+                  color: '#64748b'
+                },
+                title: {
+                  display: true,
+                  text: 'Count',
+                  font: { family: "'Inter', sans-serif", size: 11, weight: '600' },
+                  color: '#64748b'
+                },
+                grid: {
+                  color: '#f1f5f9',
+                  drawBorder: false
+                }
+              },
+              x: {
+                grid: {
+                  color: '#f8fafc',
+                  drawBorder: false
+                },
+                ticks: {
+                  font: { family: "'Inter', sans-serif", size: 11, weight: '600' },
+                  color: '#64748b'
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // ==========================================
+      // SECTION 5: 3 DOUGHNUT CHARTS (SHARES)
+      // ==========================================
+      const shareChannels = ['Email', 'Media (MMR)', 'Social'];
+      const shareColors = ['#2563eb', '#10b981', '#a855f7'];
+
+      const getDoughnutOptions = (isCurrency = false) => ({
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '68%',
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              usePointStyle: true,
+              pointStyle: 'circle',
+              boxWidth: 8,
+              padding: 14,
+              font: { family: "'Inter', sans-serif", size: 11, weight: '600' },
+              color: '#334155'
+            }
+          },
+          tooltip: {
+            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+            padding: 10,
+            cornerRadius: 8,
+            titleFont: { family: "'Inter', sans-serif", size: 12, weight: 'bold' },
+            bodyFont: { family: "'Inter', sans-serif", size: 11 },
+            callbacks: {
+              label: function(context) {
+                const val = context.parsed;
+                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                const pct = total > 0 ? ((val / total) * 100).toFixed(1) : '0.0';
+                const prefix = isCurrency ? '$' : '';
+                return ` ${context.label}: ${prefix}${val.toLocaleString('en-US')} (${pct}%)`;
+              }
+            }
+          }
+        }
+      });
+
+      // 1. Registrations Share
+      const ctxRegShare = document.getElementById('chartRegShare');
+      if (ctxRegShare) {
+        new Chart(ctxRegShare, {
+          type: 'doughnut',
+          data: {
+            labels: shareChannels,
+            datasets: [{
+              data: [116, 65, 0],
+              backgroundColor: shareColors,
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: getDoughnutOptions(false)
+        });
+      }
+
+      // 2. Users Share
+      const ctxUsersShare = document.getElementById('chartUsersShare');
+      if (ctxUsersShare) {
+        new Chart(ctxUsersShare, {
+          type: 'doughnut',
+          data: {
+            labels: shareChannels,
+            datasets: [{
+              data: [5, 3, 0],
+              backgroundColor: shareColors,
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: getDoughnutOptions(false)
+        });
+      }
+
+      // 3. Revenue Share
+      const ctxRevShare = document.getElementById('chartRevenueShare');
+      if (ctxRevShare) {
+        new Chart(ctxRevShare, {
+          type: 'doughnut',
+          data: {
+            labels: shareChannels,
+            datasets: [{
+              data: [800, 520, 0],
+              backgroundColor: shareColors,
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: getDoughnutOptions(true)
+        });
+      }
+
+    });
+  </script>
+
+</body>
+</html>
