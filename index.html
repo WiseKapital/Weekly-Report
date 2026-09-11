@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>September 01 - 04 - Marketing & Media Performance Dashboard</title>
+  <title>Weekly Analytics report - September 07 - 11</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -62,14 +62,6 @@
       border-radius: 4px;
     }
 
-    /* Grid borders for tables */
-    table.table-grid,
-    table.table-grid th,
-    table.table-grid td {
-      border: 1px solid #e2e8f0;
-      border-collapse: collapse;
-    }
-
     .excel-table {
       border-collapse: collapse !important;
       border: 1px solid #cbd5e1 !important;
@@ -99,433 +91,841 @@
   <div class="max-w-[1400px] mx-auto space-y-6">
 
     <!-- ======================================================== -->
-    <!-- SECTION 1: MMR MEDIA MANAGEMENT REPORT -->
+    <!-- SECTION 1: WEEKLY ANALYTICS REPORT                       -->
     <!-- ======================================================== -->
 
     <!-- TOP HEADER -->
     <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-3">
-      <h1 class="text-xl font-extrabold text-slate-900 tracking-tight">MMR Media Management Report</h1>
-      <span class="bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded-full">September 01 - 04</span>
+      <h1 class="text-xl font-extrabold text-slate-900 tracking-tight">Weekly Analytics report</h1>
+      <span class="bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded-full">September 07 - 11</span>
     </div>
 
-    <!-- TOP METRIC CARDS (3 COLS) -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- 5 TOTALS KPI CARDS (SUM OF ALL CHANNELS) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
       
-      <!-- LEADS (CPL) MTD -->
+      <!-- 1. TOTAL BUDGET -->
       <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
         <div class="flex justify-between items-start">
-          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">LEADS (CPL) MTD</span>
-          <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center text-sm">
-            <i class="fa-regular fa-eye"></i>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">BUDGET</span>
+          <div class="w-7 h-7 rounded-lg bg-amber-50 text-amber-500 flex items-center justify-center text-xs">
+            <i class="fa-solid fa-folder"></i>
           </div>
         </div>
         <div class="my-3 flex items-baseline gap-1.5">
-          <span class="text-4xl font-black text-slate-900 tracking-tight">1351</span>
-          <span class="text-xs font-bold text-slate-500">MTD</span>
+          <span class="text-3xl font-black text-slate-900 tracking-tight">$1,042</span>
+          <span class="text-xs font-bold text-slate-400">MTD</span>
         </div>
         <div class="flex items-center gap-2">
-          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
-            <span class="text-slate-400">KPI</span> <span class="font-extrabold text-slate-800 ml-1">4000</span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            KPI <span class="font-extrabold text-slate-800 ml-0.5">7.7k</span>
           </span>
-          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
-            <span class="text-slate-400">RR</span> <span class="font-extrabold text-green-custom ml-1">10132</span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            RR <span class="font-extrabold text-green-custom ml-0.5">2,878</span>
           </span>
         </div>
       </div>
 
-      <!-- SIGNUPS (CPR) MTD -->
+      <!-- 2. TOTAL SIGNUPS -->
       <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
         <div class="flex justify-between items-start">
-          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">SIGNUPS (CPR) MTD</span>
-          <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center text-sm">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">SIGNUPS</span>
+          <div class="w-7 h-7 rounded-lg bg-blue-50 text-blue-500 flex items-center justify-center text-xs">
             <i class="fa-solid fa-check"></i>
           </div>
         </div>
         <div class="my-3 flex items-baseline gap-1.5">
-          <span class="text-4xl font-black text-slate-900 tracking-tight">65</span>
-          <span class="text-xs font-bold text-slate-500">MTD</span>
+          <span class="text-3xl font-black text-slate-900 tracking-tight">126</span>
+          <span class="text-xs font-bold text-slate-400">MTD</span>
         </div>
         <div class="flex items-center gap-2">
-          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
-            <span class="text-slate-400">KPI</span> <span class="font-extrabold text-slate-800 ml-1">1000</span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            KPI <span class="font-extrabold text-slate-800 ml-0.5">1750</span>
           </span>
-          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
-            <span class="text-slate-400">RR</span> <span class="font-extrabold text-red-custom ml-1">489</span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            RR <span class="font-extrabold text-red-custom ml-0.5">736</span>
           </span>
         </div>
       </div>
 
-      <!-- USERS (CPA) MTD -->
+      <!-- 3. TOTAL USERS -->
       <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
         <div class="flex justify-between items-start">
-          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">USERS (CPA) MTD</span>
-          <div class="w-8 h-8 rounded-full bg-purple-50 text-purple-500 flex items-center justify-center text-sm">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">USERS</span>
+          <div class="w-7 h-7 rounded-lg bg-purple-50 text-purple-500 flex items-center justify-center text-xs">
             <i class="fa-regular fa-user"></i>
           </div>
         </div>
         <div class="my-3 flex items-baseline gap-1.5">
-          <span class="text-4xl font-black text-slate-900 tracking-tight">3</span>
-          <span class="text-xs font-bold text-slate-500">MTD</span>
+          <span class="text-3xl font-black text-slate-900 tracking-tight">8</span>
+          <span class="text-xs font-bold text-slate-400">MTD</span>
         </div>
         <div class="flex items-center gap-2">
-          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
-            <span class="text-slate-400">KPI</span> <span class="font-extrabold text-slate-800 ml-1">300</span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            KPI <span class="font-extrabold text-slate-800 ml-0.5">360</span>
           </span>
-          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-700">
-            <span class="text-slate-400">RR</span> <span class="font-extrabold text-red-custom ml-1">23</span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            RR <span class="font-extrabold text-red-custom ml-0.5">39</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- 4. TOTAL REVENUE -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">REVENUE</span>
+          <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-500 flex items-center justify-center text-xs">
+            <i class="fa-solid fa-dollar-sign"></i>
+          </div>
+        </div>
+        <div class="my-3 flex items-baseline gap-1.5">
+          <span class="text-3xl font-black text-slate-900 tracking-tight">$2,015</span>
+          <span class="text-xs font-bold text-slate-400">MTD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            KPI <span class="font-extrabold text-slate-800 ml-0.5">23.1k</span>
+          </span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            RR <span class="font-extrabold text-red-custom ml-0.5">5,526</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- 5. TOTAL PROFIT -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">PROFIT</span>
+          <div class="w-7 h-7 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center text-xs">
+            <i class="fa-solid fa-sack-dollar"></i>
+          </div>
+        </div>
+        <div class="my-3 flex items-baseline gap-1.5">
+          <span class="text-3xl font-black text-slate-900 tracking-tight">$973</span>
+          <span class="text-xs font-bold text-slate-400">MTD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            KPI <span class="font-extrabold text-slate-800 ml-0.5">15.4k</span>
+          </span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            RR <span class="font-extrabold text-red-custom ml-0.5">2,648</span>
           </span>
         </div>
       </div>
 
     </div>
 
-    <!-- MIDDLE PROGRESS CHARTS (3 COLS) -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- 1. TEAM PERFORMANCE OVERVIEW (LINE CHART) -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 space-y-4">
       
-      <!-- CPL BY PARTNER (MTD) -->
-      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 h-[280px]">
-        <h3 class="text-xs font-extrabold uppercase text-slate-900 tracking-wider mb-4">CPL BY PARTNER (MTD)</h3>
-        <div class="space-y-3.5">
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>FXM</span><span>1014</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-green-custom h-full" style="width: 100%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>LGL</span><span>211</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-green-custom h-full" style="width: 21%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>ADM</span><span>126</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-green-custom h-full" style="width: 12.5%;"></div></div>
-          </div>
+      <!-- CONTROLS & SECTION SELECTOR -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
+        <div>
+          <h3 class="text-base font-bold text-slate-900">Team Performance Overview</h3>
+          <p class="text-xs text-slate-500 font-medium">Registrations and FTD/Users by day (Sep 07 - 11).</p>
+        </div>
+
+        <!-- SECTION TABS (MEDIA / EMAIL / SOCIAL / ALL CHANNELS) -->
+        <div class="flex flex-wrap items-center gap-1.5 bg-slate-100 p-1 rounded-xl">
+          <button onclick="setTrendView('media')" id="btn-trend-media" class="px-3 py-1.5 text-xs font-bold rounded-lg transition bg-slate-900 text-white shadow-sm">
+            Media (MMR)
+          </button>
+          <button onclick="setTrendView('email')" id="btn-trend-email" class="px-3 py-1.5 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-200">
+            Email
+          </button>
+          <button onclick="setTrendView('social')" id="btn-trend-social" class="px-3 py-1.5 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-200">
+            Social
+          </button>
+          <button onclick="setTrendView('comparison')" id="btn-trend-comparison" class="px-3 py-1.5 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-200">
+            All Channels
+          </button>
         </div>
       </div>
 
-      <!-- REGISTRATIONS BY PARTNER (MTD) -->
-      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 h-[280px] flex flex-col">
-        <h3 class="text-xs font-extrabold uppercase text-slate-900 tracking-wider mb-4">REGISTRATIONS BY PARTNER (MTD)</h3>
-        <div class="space-y-2.5 overflow-y-auto pr-2 custom-scrollbar flex-1">
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>---</span><span>18</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 100%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>MON</span><span>11</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 61%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>PRO</span><span>6</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 33%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>ADM</span><span>5</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 27%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>VENE</span><span>2</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 11%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>SDG</span><span>2</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 11%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>LUM</span><span>1</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 5.5%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>EPV</span><span>1</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 5.5%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>MOD</span><span>1</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-blue-custom h-full" style="width: 5.5%;"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CPA BY PARTNER (MTD) -->
-      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 h-[280px]">
-        <h3 class="text-xs font-extrabold uppercase text-slate-900 tracking-wider mb-4">CPA BY PARTNER (MTD)</h3>
-        <div class="space-y-3.5">
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>PRO</span><span>2</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-purple-custom h-full" style="width: 100%;"></div></div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex justify-between text-xs font-extrabold"><span>SPX</span><span>1</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-purple-custom h-full" style="width: 50%;"></div></div>
-          </div>
-        </div>
+      <!-- CANVAS (SINGLE COUNT Y-AXIS) -->
+      <div class="relative w-full h-80 sm:h-96">
+        <canvas id="dailyTrendLineChart"></canvas>
       </div>
 
     </div>
 
-    <!-- MAIN TABLE -->
-    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="w-full text-left text-xs table-grid">
-          <thead>
-            <tr class="bg-mint-header text-slate-800 font-extrabold">
-              <th rowspan="2" class="p-3 uppercase tracking-wider align-middle w-36">MEDIA PARTNER</th>
-              <th colspan="3" class="p-2.5 uppercase tracking-wider text-center">CPL</th>
-              <th colspan="3" class="p-2.5 uppercase tracking-wider text-center">REGISTRATIONS</th>
-              <th colspan="3" class="p-2.5 uppercase tracking-wider text-center">CPA</th>
-              <th rowspan="2" class="p-3 uppercase tracking-wider text-center align-middle">REVENUE</th>
-              <th rowspan="2" class="p-3 uppercase tracking-wider text-center align-middle">BUDGET</th>
-              <th rowspan="2" class="p-3 uppercase tracking-wider text-center align-middle">PROFIT</th>
-            </tr>
-            <tr class="bg-mint-header text-slate-600 font-bold text-center">
-              <th class="py-1.5 px-3">KPI</th>
-              <th class="py-1.5 px-3">MTD</th>
-              <th class="py-1.5 px-3">RR</th>
-              <th class="py-1.5 px-3">KPI</th>
-              <th class="py-1.5 px-3">MTD</th>
-              <th class="py-1.5 px-3">RR</th>
-              <th class="py-1.5 px-3">KPI</th>
-              <th class="py-1.5 px-3">MTD</th>
-              <th class="py-1.5 px-3">RR</th>
-            </tr>
-          </thead>
-          <tbody class="font-semibold text-slate-700">
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">ADM</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">1333</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">126</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">945</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">5</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">38</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">6</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">-6</td>
-            </tr>
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">EPV</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">1</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">8</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-            </tr>
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">FXM</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">1334</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">1014</td>
-              <td class="p-2.5 text-center text-green-custom font-extrabold">7605</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">120</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">-120</td>
-            </tr>
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">LGL</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">1333</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">211</td>
-              <td class="p-2.5 text-center text-green-custom font-extrabold">1582</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">18</td>
-              <td class="p-2.5 text-center text-green-custom font-extrabold">135</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">33</td>
-              <td class="p-2.5 text-red-custom font-extrabold">-33</td>
-            </tr>
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">LUM</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">1</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">8</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-            </tr>
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">MOD</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">500</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">1</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">8</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-            </tr>
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">MON</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">11</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">82</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-            </tr>
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">PRO</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">6</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">45</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">150</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">2</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">15</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">300</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-green-custom font-extrabold">300</td>
-            </tr>
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">SDG</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">2</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">15</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-            </tr>
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">SPX</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">18</td>
-              <td class="p-2.5 text-center text-green-custom font-extrabold">135</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">150</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">1</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">8</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">220</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center text-green-custom font-extrabold">220</td>
-            </tr>
-            <tr class="hover:bg-slate-50/70">
-              <td class="p-2.5 font-extrabold text-slate-900">VENE</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 italic font-normal">100</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">2</td>
-              <td class="p-2.5 text-center text-red-custom font-extrabold">15</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center text-slate-400 font-normal">—</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-              <td class="p-2.5 text-center font-extrabold text-slate-900">0</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr class="bg-white font-black text-slate-900 border-t-2 border-slate-300">
-              <td class="p-3 font-extrabold">Grand total</td>
-              <td class="p-3 text-center text-slate-400 italic font-bold">4000</td>
-              <td class="p-3 text-center font-black text-slate-900">1351</td>
-              <td class="p-3 text-center text-green-custom font-black">10132</td>
-              <td class="p-3 text-center text-slate-400 italic font-bold">1000</td>
-              <td class="p-3 text-center font-black text-slate-900">65</td>
-              <td class="p-3 text-center text-red-custom font-black">489</td>
-              <td class="p-3 text-center text-slate-400 italic font-bold">300</td>
-              <td class="p-3 text-center font-black text-slate-900">3</td>
-              <td class="p-3 text-center text-red-custom font-black">23</td>
-              <td class="p-3 text-center font-black text-slate-900">520</td>
-              <td class="p-3 text-center font-black text-slate-900">159</td>
-              <td class="p-3 text-center text-green-custom font-black">+361</td>
-            </tr>
-          </tfoot>
-        </table>
+    <!-- 2. SHARES (3 DOUGHNUT CHARTS) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- 1. REGISTRATIONS SHARE -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between min-h-[380px]">
+        <div>
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Registrations Share</h3>
+            <span class="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full">Total: 126</span>
+          </div>
+          <p class="text-xs text-slate-400 font-medium mt-0.5 mb-2">Combination of Media, Email &amp; Social</p>
+        </div>
+        <div class="relative h-60 flex items-center justify-center w-full">
+          <canvas id="chartRegShare"></canvas>
+        </div>
       </div>
+
+      <!-- 2. USERS SHARE -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between min-h-[380px]">
+        <div>
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Users Share</h3>
+            <span class="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full">Total: 8</span>
+          </div>
+          <p class="text-xs text-slate-400 font-medium mt-0.5 mb-2">Combination of Media, Email &amp; Social</p>
+        </div>
+        <div class="relative h-60 flex items-center justify-center w-full">
+          <canvas id="chartUsersShare"></canvas>
+        </div>
+      </div>
+
+      <!-- 3. REVENUE SHARE -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between min-h-[380px]">
+        <div>
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Revenue Share</h3>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">Total: $2,015</span>
+          </div>
+          <p class="text-xs text-slate-400 font-medium mt-0.5 mb-2">Combination of Media, Email &amp; Social</p>
+        </div>
+        <div class="relative h-60 flex items-center justify-center w-full">
+          <canvas id="chartRevenueShare"></canvas>
+        </div>
+      </div>
+
     </div>
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 2: EMAIL REPORT SEPTEMBER 01 - 04 -->
+    <!-- SECTION 2: MMR MEDIA MANAGEMENT REPORT                   -->
+    <!-- ======================================================== -->
+
+    <!-- TOP HEADER -->
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-3 mt-8">
+      <h2 class="text-xl font-extrabold text-slate-900 tracking-tight">MMR Media Management Report</h2>
+      <span class="bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded-full">September 07 - 11</span>
+    </div>
+
+    <!-- ROW 1: 5 TOP KPI CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      
+      <!-- 1. BUDGET -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">BUDGET</span>
+          <div class="w-7 h-7 rounded-lg bg-amber-50 text-amber-500 flex items-center justify-center text-xs">
+            <i class="fa-solid fa-folder"></i>
+          </div>
+        </div>
+        <div class="my-3 flex items-baseline gap-1.5">
+          <span class="text-3xl font-black text-slate-900 tracking-tight">$102</span>
+          <span class="text-xs font-bold text-slate-400">MTD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            KPI <span class="font-extrabold text-slate-800 ml-0.5">5.5k</span>
+          </span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            RR <span class="font-extrabold text-green-custom ml-0.5">278</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- 2. SIGNUPS -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">SIGNUPS</span>
+          <div class="w-7 h-7 rounded-lg bg-blue-50 text-blue-500 flex items-center justify-center text-xs">
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </div>
+        <div class="my-3 flex items-baseline gap-1.5">
+          <span class="text-3xl font-black text-slate-900 tracking-tight">62</span>
+          <span class="text-xs font-bold text-slate-400">MTD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            KPI <span class="font-extrabold text-slate-800 ml-0.5">1000</span>
+          </span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            RR <span class="font-extrabold text-red-custom ml-0.5">169</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- 3. USERS -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">USERS</span>
+          <div class="w-7 h-7 rounded-lg bg-purple-50 text-purple-500 flex items-center justify-center text-xs">
+            <i class="fa-regular fa-user"></i>
+          </div>
+        </div>
+        <div class="my-3 flex items-baseline gap-1.5">
+          <span class="text-3xl font-black text-slate-900 tracking-tight">6</span>
+          <span class="text-xs font-bold text-slate-400">MTD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            KPI <span class="font-extrabold text-slate-800 ml-0.5">300</span>
+          </span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            RR <span class="font-extrabold text-red-custom ml-0.5">17</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- 4. REVENUE -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">REVENUE</span>
+          <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-500 flex items-center justify-center text-xs">
+            <i class="fa-solid fa-dollar-sign"></i>
+          </div>
+        </div>
+        <div class="my-3 flex items-baseline gap-1.5">
+          <span class="text-3xl font-black text-slate-900 tracking-tight">$670</span>
+          <span class="text-xs font-bold text-slate-400">MTD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            KPI <span class="font-extrabold text-slate-800 ml-0.5">16.5k</span>
+          </span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            RR <span class="font-extrabold text-red-custom ml-0.5">1,826</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- 5. PROFIT -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">PROFIT</span>
+          <div class="w-7 h-7 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center text-xs">
+            <i class="fa-solid fa-sack-dollar"></i>
+          </div>
+        </div>
+        <div class="my-3 flex items-baseline gap-1.5">
+          <span class="text-3xl font-black text-slate-900 tracking-tight">$568</span>
+          <span class="text-xs font-bold text-slate-400">MTD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            KPI <span class="font-extrabold text-slate-800 ml-0.5">11k</span>
+          </span>
+          <span class="px-2 py-1 bg-slate-50 border border-slate-100 rounded text-xs font-bold text-slate-600">
+            RR <span class="font-extrabold text-red-custom ml-0.5">1,548</span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 2: 5 BREAKDOWN CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      
+      <!-- 1. BUDGET BREAKDOWN -->
+      <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col min-h-[310px]">
+        <div class="bg-[#fffbeb] text-[#b45309] font-extrabold text-[11px] uppercase tracking-wider py-1 rounded-md text-center mb-4">
+          BUDGET
+        </div>
+        <div class="space-y-3.5 flex-1">
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>FXM</span><span>$30</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-amber-500 h-full rounded-full" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>REV</span><span>$30</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-amber-500 h-full rounded-full" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>ADM</span><span>$27</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-amber-500 h-full rounded-full" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>LGL</span><span>$15</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-amber-500 h-full rounded-full" style="width: 50%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. SIGNUPS BREAKDOWN -->
+      <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col min-h-[310px]">
+        <div class="bg-[#eff6ff] text-[#1d4ed8] font-extrabold text-[11px] uppercase tracking-wider py-1 rounded-md text-center mb-4">
+          SIGNUPS
+        </div>
+        <div class="space-y-2 overflow-y-auto pr-1.5 custom-scrollbar flex-1 max-h-[235px]">
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>LGL</span><span>20</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 100%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>MON</span><span>14</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 70%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>PRO</span><span>8</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 40%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>LUM</span><span>4</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 20%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>ADM</span><span>3</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 15%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>ADO</span><span>3</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 15%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>SPX</span><span>2</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 10%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>VENE</span><span>2</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 10%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>WDG</span><span>2</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 10%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>CHA</span><span>1</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 5%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>EPV</span><span>1</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 5%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>WRW</span><span>1</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 5%;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1"><span>BTD</span><span>1</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden"><div class="bg-[#1e60f2] h-full rounded-full" style="width: 5%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. USERS BREAKDOWN -->
+      <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col min-h-[310px]">
+        <div class="bg-[#faf5ff] text-[#7e22ce] font-extrabold text-[11px] uppercase tracking-wider py-1 rounded-md text-center mb-4">
+          USERS
+        </div>
+        <div class="space-y-3 flex-1">
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>PRO</span><span>2</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#a855f7] h-full rounded-full" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>ADM</span><span>1</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#a855f7] h-full rounded-full" style="width: 50%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>LGL</span><span>1</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#a855f7] h-full rounded-full" style="width: 50%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>WDG</span><span>1</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#a855f7] h-full rounded-full" style="width: 50%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>MON</span><span>1</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#a855f7] h-full rounded-full" style="width: 50%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. REVENUE BREAKDOWN -->
+      <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col min-h-[310px]">
+        <div class="bg-[#f0fdf4] text-[#15803d] font-extrabold text-[11px] uppercase tracking-wider py-1 rounded-md text-center mb-4">
+          REVENUE
+        </div>
+        <div class="space-y-3.5 flex-1">
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>PRO</span><span>$280</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#00e676] h-full rounded-full" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>ADM</span><span>$220</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#00e676] h-full rounded-full" style="width: 78.5%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>LGL</span><span>$170</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#00e676] h-full rounded-full" style="width: 60.7%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. PROFIT BREAKDOWN -->
+      <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col min-h-[310px]">
+        <div class="bg-[#f0fdfa] text-[#0f766e] font-extrabold text-[11px] uppercase tracking-wider py-1 rounded-md text-center mb-4">
+          PROFIT
+        </div>
+        <div class="space-y-2.5 overflow-y-auto pr-1 custom-scrollbar flex-1">
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>PRO</span><span>$280</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#0d9488] h-full rounded-full" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>ADM</span><span>$193</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#0d9488] h-full rounded-full" style="width: 69%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-slate-800 mb-1">
+              <span>LGL</span><span>$155</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-[#0d9488] h-full rounded-full" style="width: 55%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-red-500 mb-1">
+              <span>REV</span><span>-$30</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-red-500 h-full rounded-full" style="width: 11%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold text-red-500 mb-1">
+              <span>FXM</span><span>-$30</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+              <div class="bg-red-500 h-full rounded-full" style="width: 11%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 3: 2 DONUT CHARTS (LEADS 1,436 & CPR 0.0) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      
+      <!-- LEFT: LEADS (CPL) - Lead Share by Partner -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-emerald-50 text-emerald-700 border border-emerald-200 uppercase tracking-wider">
+              LEADS (CPL)
+            </span>
+            <div class="flex items-center gap-3 text-xs">
+              <span class="text-slate-500">MTD <strong class="text-slate-900 ml-0.5">1,436</strong></span>
+              <span class="text-slate-500">KPI <strong class="text-slate-900 ml-0.5">4,000</strong></span>
+              <span class="text-slate-500">RR <strong class="text-green-custom ml-0.5">3,916</strong></span>
+            </div>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 tracking-tight">Lead Share by Partner</h3>
+        </div>
+
+        <div class="relative h-64 w-full flex items-center justify-center my-3">
+          <canvas id="cplLeadShareChart"></canvas>
+          <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+            <span class="text-3xl font-black text-slate-900 tracking-tight">1,436</span>
+            <span class="text-[10px] font-extrabold text-slate-400 tracking-wider uppercase mt-0.5">TOTAL LEADS</span>
+          </div>
+        </div>
+
+        <!-- Legend Pills -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-slate-50">
+          <div class="bg-slate-50/70 border border-slate-100 rounded-xl p-2 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#00e676] flex-shrink-0"></span>
+            <div class="truncate">
+              <span class="font-bold text-xs text-slate-900 block truncate">FXM: 773</span>
+              <span class="text-[10px] text-slate-400 font-semibold block">53.8%</span>
+            </div>
+          </div>
+          <div class="bg-slate-50/70 border border-slate-100 rounded-xl p-2 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#1e60f2] flex-shrink-0"></span>
+            <div class="truncate">
+              <span class="font-bold text-xs text-slate-900 block truncate">ADM: 495</span>
+              <span class="text-[10px] text-slate-400 font-semibold block">34.5%</span>
+            </div>
+          </div>
+          <div class="bg-slate-50/70 border border-slate-100 rounded-xl p-2 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#a855f7] flex-shrink-0"></span>
+            <div class="truncate">
+              <span class="font-bold text-xs text-slate-900 block truncate">LGL: 163</span>
+              <span class="text-[10px] text-slate-400 font-semibold block">11.4%</span>
+            </div>
+          </div>
+          <div class="bg-slate-50/70 border border-slate-100 rounded-xl p-2 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#f59e0b] flex-shrink-0"></span>
+            <div class="truncate">
+              <span class="font-bold text-xs text-slate-900 block truncate">CHA: 5</span>
+              <span class="text-[10px] text-slate-400 font-semibold block">0.3%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: CPR - CPR Performance -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-amber-50 text-amber-700 border border-amber-200 uppercase tracking-wider">
+              CPR
+            </span>
+            <div class="flex items-center gap-3 text-xs">
+              <span class="text-slate-500">MTD <strong class="text-slate-900 ml-0.5">0.0</strong></span>
+              <span class="text-slate-500">KPI <strong class="text-slate-900 ml-0.5">200</strong></span>
+              <span class="text-slate-500">RR <strong class="text-slate-900 ml-0.5">0.0</strong></span>
+            </div>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 tracking-tight">CPR Performance</h3>
+        </div>
+
+        <div class="relative h-64 w-full flex items-center justify-center my-3">
+          <canvas id="cprPerformanceChart"></canvas>
+          <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+            <span class="text-3xl font-black text-slate-300 tracking-tight">0.0</span>
+            <span class="text-[10px] font-extrabold text-slate-400 tracking-wider uppercase mt-0.5">NO DATA YET</span>
+          </div>
+        </div>
+
+        <!-- Notification banner -->
+        <div class="bg-amber-50/70 border border-amber-200/60 rounded-xl p-3 text-xs text-amber-900 font-medium flex items-center justify-center gap-2 text-center">
+          <i class="fa-solid fa-circle-info text-amber-500"></i>
+          <span>No partner data recorded yet for CPR (Target KPI: 200)</span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 3: EMAIL REPORT SEPTEMBER 07 - 11                -->
     <!-- ======================================================== -->
 
     <!-- TOP HEADER -->
     <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-3 mt-8">
-      <h2 class="text-xl font-extrabold text-slate-900 tracking-tight">Email report September 01 - 04</h2>
+      <h2 class="text-xl font-extrabold text-slate-900 tracking-tight">Email report September 07 - 11</h2>
     </div>
 
-    <!-- AFFILIATE KPI CARDS -->
-    <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-        <div>
-          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Sign Ups</p>
-          <p class="text-3xl font-bold text-amber-600 mt-1">116</p>
-          <div class="flex items-center gap-2 mt-1">
-            <span class="text-xs font-bold text-slate-900">KPI: 500</span>
-            <span class="text-xs text-slate-300">•</span>
-            <span class="text-xs font-bold text-emerald-600">RR: 870</span>
-          </div>
-        </div>
-        <div class="p-3 bg-amber-50 rounded-xl">
-          <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+    <!-- 10 TOP KPI CARDS -->
+    <div class="grid grid-cols-2 sm:grid-cols-5 xl:grid-cols-10 gap-3">
+      
+      <!-- 1. DELIVERED -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">DELIVERED</span>
+        <span class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight my-1">9,265</span>
+        <span class="text-[11px] font-medium text-slate-400">Filtered sent</span>
+      </div>
+
+      <!-- 2. OPEN -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">OPEN</span>
+        <span class="text-xl sm:text-2xl font-black text-green-custom tracking-tight my-1">512</span>
+        <span class="text-[11px] font-bold text-green-custom">5.53% Open Rate</span>
+      </div>
+
+      <!-- 3. CLICK -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">CLICK</span>
+        <span class="text-xl sm:text-2xl font-black text-blue-custom tracking-tight my-1">137</span>
+        <span class="text-[11px] font-bold text-blue-custom">1.48% Click Rate</span>
+      </div>
+
+      <!-- 4. BOUNCED -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">BOUNCED</span>
+        <span class="text-xl sm:text-2xl font-black text-red-custom tracking-tight my-1">30</span>
+        <span class="text-[11px] font-medium text-slate-400">0.32% bounce</span>
+      </div>
+
+      <!-- 5. UNSUB / BLOCK -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">UNSUB / BLOCK</span>
+        <span class="text-xl sm:text-2xl font-black text-purple-600 tracking-tight my-1">53</span>
+        <span class="text-[11px] font-medium text-slate-400">Total opt-outs</span>
+      </div>
+
+      <!-- 6. REGISTRATION -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">REGISTRATION</span>
+        <span class="text-xl sm:text-2xl font-black text-amber-600 tracking-tight my-1">58</span>
+        <div class="text-[10px] font-bold text-slate-600 truncate">
+          KPI: 500 <span class="text-slate-300">•</span> <span class="text-green-custom">RR: 567</span>
         </div>
       </div>
 
-      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-        <div>
-          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Users</p>
-          <p class="text-3xl font-bold text-indigo-600 mt-1">5</p>
-          <div class="flex items-center gap-2 mt-1">
-            <span class="text-xs font-bold text-slate-900">KPI: 40</span>
-            <span class="text-xs text-slate-300">•</span>
-            <span class="text-xs font-bold text-rose-600">RR: 38</span>
-          </div>
-        </div>
-        <div class="p-3 bg-indigo-50 rounded-xl">
-          <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+      <!-- 7. USERS -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">USERS</span>
+        <span class="text-xl sm:text-2xl font-black text-indigo-600 tracking-tight my-1">2</span>
+        <div class="text-[10px] font-bold text-slate-600 truncate">
+          KPI: 40 <span class="text-slate-300">•</span> <span class="text-red-custom">RR: 22</span>
         </div>
       </div>
 
-      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-        <div>
-          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Revenue</p>
-          <p class="text-3xl font-bold text-emerald-600 mt-1">$800</p>
-          <span class="text-xs text-slate-500 font-medium">Total Generated MTD</span>
+      <!-- 8. REVENUE -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">REVENUE</span>
+        <span class="text-xl sm:text-2xl font-black text-green-custom tracking-tight my-1">$1,345</span>
+        <div class="text-[10px] font-bold text-slate-600 truncate">
+          KPI: $3.3k <span class="text-slate-300">•</span> <span class="text-green-custom">RR: $3.7k</span>
         </div>
-        <div class="p-3 bg-emerald-50 rounded-xl">
-          <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      </div>
+
+      <!-- 9. BUDGET -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">BUDGET</span>
+        <span class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight my-1">$940</span>
+        <div class="text-[10px] font-bold text-slate-600 truncate">
+          KPI: $1.1k <span class="text-slate-300">•</span> <span class="text-green-custom">RR: $2.6k</span>
         </div>
+      </div>
+
+      <!-- 10. PROFIT -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">PROFIT</span>
+        <span class="text-xl sm:text-2xl font-black text-green-custom tracking-tight my-1">$405</span>
+        <div class="text-[10px] font-bold text-slate-600 truncate">
+          KPI: $2.2k <span class="text-slate-300">•</span> <span class="text-red-custom">RR: $1.1k</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MTD EMAIL PERFORMANCE BY ESP TABLE -->
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100">
+        <h3 class="text-xs font-extrabold text-slate-800 uppercase tracking-wider">MTD EMAIL PERFORMANCE BY ESP</h3>
+        <span class="text-xs font-semibold text-slate-400">Sep 07, 2026 – Sep 11, 2026</span>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-right">
+          <thead class="bg-[#455841] text-white text-[11px] uppercase tracking-wider font-bold">
+            <tr>
+              <th class="py-3 px-4 text-left font-bold">ESP ▲</th>
+              <th class="py-3 px-4 text-right font-bold">DELIVERED</th>
+              <th class="py-3 px-4 text-right font-bold">BOUNCED</th>
+              <th class="py-3 px-4 text-right font-bold">OPENED</th>
+              <th class="py-3 px-4 text-right font-bold">CLICKED</th>
+              <th class="py-3 px-4 text-right font-bold">SIGNUPS</th>
+              <th class="py-3 px-4 text-right font-bold">PLAYERS</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700 font-semibold">
+            <tr class="hover:bg-slate-50/70">
+              <td class="py-3 px-4 text-left font-extrabold text-slate-900">MLJ (Mailjet) IP 1</td>
+              <td class="py-3 px-4 text-slate-900">349</td>
+              <td class="py-3 px-4 text-slate-900">3</td>
+              <td class="py-3 px-4 text-green-custom font-extrabold">38</td>
+              <td class="py-3 px-4 text-blue-custom font-extrabold">5</td>
+              <td class="py-3 px-4 text-amber-600 font-extrabold">1</td>
+              <td class="py-3 px-4 text-indigo-600 font-extrabold">0</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="py-3 px-4 text-left font-extrabold text-slate-900">MLJ (Mailjet) IP 2</td>
+              <td class="py-3 px-4 text-slate-900">282</td>
+              <td class="py-3 px-4 text-slate-900">0</td>
+              <td class="py-3 px-4 text-green-custom font-extrabold">26</td>
+              <td class="py-3 px-4 text-blue-custom font-extrabold">3</td>
+              <td class="py-3 px-4 text-amber-600 font-extrabold">0</td>
+              <td class="py-3 px-4 text-indigo-600 font-extrabold">0</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="py-3 px-4 text-left font-extrabold text-slate-900">MLJ (Mailjet) IP 3 / SH</td>
+              <td class="py-3 px-4 text-slate-900">1,590</td>
+              <td class="py-3 px-4 text-slate-900">7</td>
+              <td class="py-3 px-4 text-green-custom font-extrabold">43</td>
+              <td class="py-3 px-4 text-blue-custom font-extrabold">5</td>
+              <td class="py-3 font-extrabold text-slate-900">0</td>
+              <td class="py-3 font-extrabold text-slate-900">0</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="py-3 px-4 text-left font-extrabold text-slate-900">SEG (Sendgrid) IP 1</td>
+              <td class="py-3 px-4 text-slate-900">2,503</td>
+              <td class="py-3 px-4 text-slate-900">18</td>
+              <td class="py-3 px-4 text-green-custom font-extrabold">95</td>
+              <td class="py-3 px-4 text-blue-custom font-extrabold">38</td>
+              <td class="py-3 px-4 text-amber-600 font-extrabold">0</td>
+              <td class="py-3 px-4 text-indigo-600 font-extrabold">0</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <td class="py-3 px-4 text-left font-extrabold text-slate-900">SEG (Sendgrid) IP 2 / SH</td>
+              <td class="py-3 px-4 text-slate-900">4,541</td>
+              <td class="py-3 px-4 text-slate-900">2</td>
+              <td class="py-3 px-4 text-green-custom font-extrabold">310</td>
+              <td class="py-3 px-4 text-blue-custom font-extrabold">86</td>
+              <td class="py-3 px-4 text-amber-600 font-extrabold">57</td>
+              <td class="py-3 px-4 text-indigo-600 font-extrabold">2</td>
+            </tr>
+          </tbody>
+          <tfoot class="border-t-2 border-slate-300 bg-slate-50 font-black text-slate-900">
+            <tr>
+              <td class="py-3 px-4 text-left font-black">Grand total</td>
+              <td class="py-3 px-4 font-black">9,265</td>
+              <td class="py-3 px-4 font-black">30</td>
+              <td class="py-3 px-4 text-green-custom font-black">512</td>
+              <td class="py-3 px-4 text-blue-custom font-black">137</td>
+              <td class="py-3 px-4 text-amber-600 font-black">58</td>
+              <td class="py-3 px-4 text-indigo-600 font-black">2</td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
     </section>
 
@@ -549,38 +949,38 @@
           <tbody class="text-slate-700">
             <tr class="hover:bg-slate-50 bg-white">
               <td class="py-2.5 px-4 text-left font-medium text-slate-900">GameTime Digital</td>
-              <td class="py-2.5 px-4 text-center font-mono font-bold text-amber-600">111</td>
-              <td class="py-2.5 px-4 text-center font-mono font-bold text-indigo-600">4</td>
-              <td class="py-2.5 px-4 text-center font-mono font-bold text-emerald-600">$680</td>
-              <td class="py-2.5 px-4 text-center font-mono font-semibold text-emerald-600">1:28</td>
-            </tr>
-            <tr class="hover:bg-slate-50 bg-slate-50/40">
-              <td class="py-2.5 px-4 text-left font-medium text-slate-900">Basher Agency</td>
-              <td class="py-2.5 px-4 text-center font-mono font-semibold">4</td>
-              <td class="py-2.5 px-4 text-center font-mono font-bold text-indigo-600">1</td>
-              <td class="py-2.5 px-4 text-center font-mono font-bold text-emerald-600">$120</td>
-              <td class="py-2.5 px-4 text-center font-mono font-semibold text-emerald-600">1:4</td>
-            </tr>
-            <tr class="hover:bg-slate-50 bg-white">
-              <td class="py-2.5 px-4 text-left font-medium text-slate-900">AFF 66</td>
-              <td class="py-2.5 px-4 text-center font-mono font-semibold">1</td>
-              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
-              <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
-              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:1</td>
+              <td class="py-2.5 px-4 text-center font-mono font-bold text-amber-600">41</td>
+              <td class="py-2.5 px-4 text-center font-mono font-bold text-indigo-600">2</td>
+              <td class="py-2.5 px-4 text-center font-mono font-bold text-emerald-600">$405</td>
+              <td class="py-2.5 px-4 text-center font-mono font-semibold text-emerald-600">1:21</td>
             </tr>
             <tr class="hover:bg-slate-50 bg-slate-50/40">
               <td class="py-2.5 px-4 text-left font-medium text-slate-900">CHANCED</td>
-              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono font-semibold text-amber-600">14</td>
               <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
               <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
-              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:14</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-white">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">AFF 66</td>
+              <td class="py-2.5 px-4 text-center font-mono font-semibold text-amber-600">5</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:5</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-slate-50/40">
+              <td class="py-2.5 px-4 text-left font-medium text-slate-900">Basher Agency</td>
+              <td class="py-2.5 px-4 text-center font-mono font-semibold text-amber-600">3</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:3</td>
             </tr>
             <tr class="hover:bg-slate-50 bg-white">
               <td class="py-2.5 px-4 text-left font-medium text-slate-900">Splash</td>
-              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
+              <td class="py-2.5 px-4 text-center font-mono font-semibold text-amber-600">1</td>
               <td class="py-2.5 px-4 text-center font-mono text-slate-400">0</td>
               <td class="py-2.5 px-4 text-center font-mono text-slate-400">$0</td>
-              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:0</td>
+              <td class="py-2.5 px-4 text-center font-mono text-slate-400">0:1</td>
             </tr>
             <tr class="hover:bg-slate-50 bg-slate-50/40">
               <td class="py-2.5 px-4 text-left font-medium text-slate-900">ALL IN AFFILIATES</td>
@@ -614,64 +1014,65 @@
           <tfoot class="border-t-2 border-slate-900 bg-slate-50 font-bold text-slate-900">
             <tr>
               <td class="py-2.5 px-4 text-left font-bold">Grand total</td>
-              <td class="py-2.5 px-4 text-center font-mono text-amber-600 font-bold">116</td>
-              <td class="py-2.5 px-4 text-center font-mono text-indigo-600 font-bold">5</td>
-              <td class="py-2.5 px-4 text-center font-mono text-emerald-600 font-bold">$800</td>
-              <td class="py-2.5 px-4 text-center font-mono text-emerald-600 font-bold">1:23</td>
+              <td class="py-2.5 px-4 text-center font-mono text-amber-600 font-bold">64</td>
+              <td class="py-2.5 px-4 text-center font-mono text-indigo-600 font-bold">2</td>
+              <td class="py-2.5 px-4 text-center font-mono text-emerald-600 font-bold">$405</td>
+              <td class="py-2.5 px-4 text-center font-mono text-emerald-600 font-bold">1:32</td>
             </tr>
           </tfoot>
         </table>
       </div>
     </section>
 
+    <!-- 2 ADVERTISER CHARTS -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      
+      <!-- 1. Sign Ups by Advertiser -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+        <div>
+          <h4 class="text-sm font-bold text-slate-900">Sign Ups by Advertiser</h4>
+          <p class="text-xs text-slate-500 mb-4">Total registrations per source (Scale 0 - 50)</p>
+        </div>
+        <div class="relative h-80">
+          <canvas id="chartAdvertiserSignUps"></canvas>
+        </div>
+      </div>
+
+      <!-- 2. Users by Advertiser -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+        <div>
+          <h4 class="text-sm font-bold text-slate-900">Users by Advertiser</h4>
+          <p class="text-xs text-slate-500 mb-4">Active converted users per source (Scale 0 - 5)</p>
+        </div>
+        <div class="relative h-80">
+          <canvas id="chartAdvertiserUsers"></canvas>
+        </div>
+      </div>
+
+    </div>
+
 
     <!-- ======================================================== -->
-    <!-- SECTION 3: SOCIAL REPORT + COINS ROYALE LOGO -->
+    <!-- SECTION 4: SOCIAL REPORT                                -->
     <!-- ======================================================== -->
 
     <!-- TOP HEADER -->
-    <header class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 mt-8">
-      <div class="flex items-center justify-between">
-        
-        <!-- LOGO + TITLE (TOP LEFT) -->
-        <div class="flex items-center gap-4 sm:gap-6">
-          <div class="flex-shrink-0 cursor-pointer">
-            <!-- COINS ROYALE OFFICIAL SVG -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 92" class="h-10 sm:h-11 w-auto select-none" style="filter: drop-shadow(0px 6px 12px rgba(22, 11, 44, 0.42));">
-              <g stroke="#160B2C" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
-                <path d="M 21,50 L 13,24 L 28,37 L 36,15 L 48,31 L 53,8 L 58,31 L 70,15 L 78,37 L 93,24 L 85,50" />
-                <ellipse cx="53" cy="52" rx="32" ry="8.5" />
-                <path d="M 23, 60 C 18, 69 27, 78 53, 78 C 79, 78 88, 69 83, 60" />
-                <path d="M 28, 70 C 19, 77 24, 87 53, 87 C 80, 87 88, 79 85, 71" />
-              </g>
-              <text x="110" y="47" font-family="'Outfit', -apple-system, sans-serif" font-weight="900" font-size="44" letter-spacing="0.5" fill="#FFFFFF" stroke="#160B2C" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round" style="paint-order: stroke fill;">COINS ROYALE</text>
-              <text x="168" y="74" font-family="'Outfit', 'Inter', sans-serif" font-weight="600" font-size="19" letter-spacing="5.2" fill="#FFFFFF">SOCIAL CASINO</text>
-            </svg>
-          </div>
+    <header class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 mt-8 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <h2 class="text-xl font-extrabold text-slate-900 tracking-tight">Social report September 07 - 11</h2>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span> Active
+        </span>
+      </div>
 
-          <div class="h-8 w-px bg-slate-200 hidden md:block"></div>
-
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="font-display font-bold text-slate-800 text-sm tracking-tight">Social Report</span>
-              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span> Active
-              </span>
-            </div>
-            <p class="text-xs text-slate-500 font-medium">September 01 - 04</p>
-          </div>
+      <!-- CAMPAIGN FILTER -->
+      <div class="hidden sm:flex items-center gap-3">
+        <div class="relative">
+          <i data-lucide="filter" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+          <select class="pl-9 pr-8 py-1.5 text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition cursor-pointer appearance-none shadow-sm">
+            <option value="all">All Campaigns</option>
+          </select>
         </div>
-
-        <!-- CAMPAIGN FILTER -->
-        <div class="hidden sm:flex items-center gap-3">
-          <div class="relative">
-            <i data-lucide="filter" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
-            <select class="pl-9 pr-8 py-1.5 text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition cursor-pointer appearance-none shadow-sm">
-              <option value="all">All Campaigns</option>
-            </select>
-          </div>
-        </div>
-
       </div>
     </header>
 
@@ -760,7 +1161,7 @@
           <thead>
             <tr class="bg-[#E2F0D9] border-b-2 border-slate-300">
               <th colspan="6" class="py-2.5 px-4 text-center font-bold text-[#276A3C] text-sm tracking-wide">
-                September 01-04 Performance Summary (Campaign Consolidated)
+                September 07 - 11 Performance Summary (Campaign Consolidated)
               </th>
             </tr>
             <tr class="bg-[#D9EAD3] border-b border-slate-300 text-slate-900 font-bold">
@@ -811,111 +1212,21 @@
       </div>
     </div>
 
-
-    <!-- ======================================================== -->
-    <!-- SECTION 4: TEAM PERFORMANCE OVERVIEW (REGISTRATIONS & FTD/USERS) -->
-    <!-- ======================================================== -->
-
-    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 space-y-4 mt-8">
-      
-      <!-- CONTROLS & SECTION SELECTOR -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
-        <div>
-          <h3 class="text-base font-bold text-slate-900">Team Performance Overview</h3>
-          <p class="text-xs text-slate-500 font-medium">Registrations and FTD/Users by day (Sep 01 - 04).</p>
-        </div>
-
-        <!-- SECTION TABS (MEDIA / EMAIL / SOCIAL / ALL CHANNELS) -->
-        <div class="flex flex-wrap items-center gap-1.5 bg-slate-100 p-1 rounded-xl">
-          <button onclick="setTrendView('media')" id="btn-trend-media" class="px-3 py-1.5 text-xs font-bold rounded-lg transition bg-slate-900 text-white shadow-sm">
-            Media (MMR)
-          </button>
-          <button onclick="setTrendView('email')" id="btn-trend-email" class="px-3 py-1.5 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-200">
-            Email
-          </button>
-          <button onclick="setTrendView('social')" id="btn-trend-social" class="px-3 py-1.5 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-200">
-            Social
-          </button>
-          <button onclick="setTrendView('comparison')" id="btn-trend-comparison" class="px-3 py-1.5 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-200">
-            All Channels
-          </button>
-        </div>
-      </div>
-
-      <!-- CANVAS (SINGLE COUNT Y-AXIS) -->
-      <div class="relative w-full h-80 sm:h-96">
-        <canvas id="dailyTrendLineChart"></canvas>
-      </div>
-
-    </div>
-
-
-    <!-- ======================================================== -->
-    <!-- SECTION 5: 3 DOUGHNUT CHARTS (3 CHANNEL SHARES) -->
-    <!-- ======================================================== -->
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-      
-      <!-- 1. REGISTRATIONS SHARE -->
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between min-h-[380px]">
-        <div>
-          <div class="flex items-center justify-between">
-            <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Registrations Share</h3>
-            <span class="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full">Total: 181</span>
-          </div>
-          <p class="text-xs text-slate-400 font-medium mt-0.5 mb-2">Combination of Media, Email &amp; Social</p>
-        </div>
-        <div class="relative h-60 flex items-center justify-center w-full">
-          <canvas id="chartRegShare"></canvas>
-        </div>
-      </div>
-
-      <!-- 2. USERS SHARE -->
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between min-h-[380px]">
-        <div>
-          <div class="flex items-center justify-between">
-            <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Users Share</h3>
-            <span class="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full">Total: 8</span>
-          </div>
-          <p class="text-xs text-slate-400 font-medium mt-0.5 mb-2">Combination of Media, Email &amp; Social</p>
-        </div>
-        <div class="relative h-60 flex items-center justify-center w-full">
-          <canvas id="chartUsersShare"></canvas>
-        </div>
-      </div>
-
-      <!-- 3. REVENUE SHARE -->
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between min-h-[380px]">
-        <div>
-          <div class="flex items-center justify-between">
-            <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Revenue Share</h3>
-            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">Total: $1,320</span>
-          </div>
-          <p class="text-xs text-slate-400 font-medium mt-0.5 mb-2">Combination of Media, Email &amp; Social</p>
-        </div>
-        <div class="relative h-60 flex items-center justify-center w-full">
-          <canvas id="chartRevenueShare"></canvas>
-        </div>
-      </div>
-
-    </div>
-
   </div>
 
   <!-- SCRIPTS: CHART.JS & LUCIDE -->
   <script>
     let trendChartInstance = null;
 
-    // Daily Trend Datasets (Sep 01 - 04)
-    // Standardized to "Registrations" & "FTD/Users" across all views
+    // Daily Trend Datasets (Sep 07 - 11)
     const trendDatasets = {
-      // 1. MEDIA (MMR)
+      // 1. MEDIA (MMR) - Total Registrations: 62, Users: 6
       media: {
         yMax: 30,
         datasets: [
           {
-            label: 'Media Registrations (Total: 65)',
-            data: [13, 14, 14, 24],
+            label: 'Media Registrations (Total: 62)',
+            data: [11, 12, 12, 13, 14],
             borderColor: '#2563eb',
             backgroundColor: '#2563eb',
             borderWidth: 2.2,
@@ -925,8 +1236,8 @@
             tension: 0.05
           },
           {
-            label: 'Media FTD/Users (Total: 3)',
-            data: [0, 0, 1, 2],
+            label: 'Media FTD/Users (Total: 6)',
+            data: [1, 1, 1, 1, 2],
             borderColor: '#ec4899',
             backgroundColor: '#ec4899',
             borderWidth: 2.2,
@@ -938,13 +1249,13 @@
         ]
       },
 
-      // 2. EMAIL
+      // 2. EMAIL - Total Registrations: 64, Users: 2
       email: {
         yMax: 40,
         datasets: [
           {
-            label: 'Email Registrations (Total: 116)',
-            data: [27, 28, 29, 32],
+            label: 'Email Registrations (Total: 64)',
+            data: [12, 13, 13, 13, 13],
             borderColor: '#2563eb',
             backgroundColor: '#2563eb',
             borderWidth: 2.2,
@@ -954,8 +1265,8 @@
             tension: 0.05
           },
           {
-            label: 'Email FTD/Users (Total: 5)',
-            data: [1, 1, 1, 2],
+            label: 'Email FTD/Users (Total: 2)',
+            data: [0, 0, 0, 1, 1],
             borderColor: '#ec4899',
             backgroundColor: '#ec4899',
             borderWidth: 2.2,
@@ -967,13 +1278,13 @@
         ]
       },
 
-      // 3. SOCIAL
+      // 3. SOCIAL - Total Registrations: 0, Users: 0
       social: {
         yMax: 10,
         datasets: [
           {
             label: 'Social Registrations (Total: 0)',
-            data: [0, 0, 0, 0],
+            data: [0, 0, 0, 0, 0],
             borderColor: '#2563eb',
             backgroundColor: '#2563eb',
             borderWidth: 2.2,
@@ -984,7 +1295,7 @@
           },
           {
             label: 'Social FTD/Users (Total: 0)',
-            data: [0, 0, 0, 0],
+            data: [0, 0, 0, 0, 0],
             borderColor: '#ec4899',
             backgroundColor: '#ec4899',
             borderWidth: 2.2,
@@ -996,14 +1307,14 @@
         ]
       },
 
-      // 4. ALL CHANNELS (COMPARING THE 3 CAMPAIGNS WITH REGISTRATIONS & FTD/USERS)
+      // 4. ALL CHANNELS
       comparison: {
         yMax: 40,
         datasets: [
           // Email
           {
-            label: 'Email Registrations (116)',
-            data: [27, 28, 29, 32],
+            label: 'Email Registrations (64)',
+            data: [12, 13, 13, 13, 13],
             borderColor: '#2563eb',
             backgroundColor: '#2563eb',
             borderWidth: 2.5,
@@ -1012,8 +1323,8 @@
             tension: 0.05
           },
           {
-            label: 'Email FTD/Users (5)',
-            data: [1, 1, 1, 2],
+            label: 'Email FTD/Users (2)',
+            data: [0, 0, 0, 1, 1],
             borderColor: '#2563eb',
             backgroundColor: '#2563eb',
             borderWidth: 2,
@@ -1024,8 +1335,8 @@
           },
           // Media
           {
-            label: 'Media Registrations (65)',
-            data: [13, 14, 14, 24],
+            label: 'Media Registrations (62)',
+            data: [11, 12, 12, 13, 14],
             borderColor: '#10b981',
             backgroundColor: '#10b981',
             borderWidth: 2.5,
@@ -1034,8 +1345,8 @@
             tension: 0.05
           },
           {
-            label: 'Media FTD/Users (3)',
-            data: [0, 0, 1, 2],
+            label: 'Media FTD/Users (6)',
+            data: [1, 1, 1, 1, 2],
             borderColor: '#10b981',
             backgroundColor: '#10b981',
             borderWidth: 2,
@@ -1047,7 +1358,7 @@
           // Social
           {
             label: 'Social Registrations (0)',
-            data: [0, 0, 0, 0],
+            data: [0, 0, 0, 0, 0],
             borderColor: '#a855f7',
             backgroundColor: '#a855f7',
             borderWidth: 2.5,
@@ -1057,7 +1368,7 @@
           },
           {
             label: 'Social FTD/Users (0)',
-            data: [0, 0, 0, 0],
+            data: [0, 0, 0, 0, 0],
             borderColor: '#a855f7',
             backgroundColor: '#a855f7',
             borderWidth: 2,
@@ -1104,46 +1415,14 @@
       }
 
       // ==========================================
-      // SECTION 3: SOCIAL REPORT CHART (BAR CHART ONLY)
-      // ==========================================
-      const ctxConversion = document.getElementById('conversionBarChart');
-      if (ctxConversion) {
-        new Chart(ctxConversion.getContext('2d'), {
-          type: 'bar',
-          data: {
-            labels: [],
-            datasets: [
-              { label: 'Registrations', data: [], backgroundColor: 'rgba(245, 158, 11, 0.85)', borderRadius: 6 },
-              { label: 'FTD/Users', data: [], backgroundColor: 'rgba(139, 92, 246, 0.85)', borderRadius: 6 }
-            ]
-          },
-          options: { 
-            responsive: true, 
-            maintainAspectRatio: false, 
-            plugins: { 
-              legend: { 
-                position: 'top',
-                labels: { font: { family: "'Inter', sans-serif", size: 11 } }
-              } 
-            },
-            scales: {
-              y: {
-                ticks: { font: { family: "'Inter', sans-serif", size: 11 } }
-              }
-            }
-          }
-        });
-      }
-
-      // ==========================================
-      // SECTION 4: TEAM TREND LINE CHART
+      // SECTION 1: WEEKLY ANALYTICS (TOP)
       // ==========================================
       const ctxTrend = document.getElementById('dailyTrendLineChart');
       if (ctxTrend) {
         trendChartInstance = new Chart(ctxTrend.getContext('2d'), {
           type: 'line',
           data: {
-            labels: ['Sep 1', 'Sep 2', 'Sep 3', 'Sep 4'],
+            labels: ['Sep 7', 'Sep 8', 'Sep 9', 'Sep 10', 'Sep 11'],
             datasets: trendDatasets.media.datasets
           },
           options: {
@@ -1215,9 +1494,6 @@
         });
       }
 
-      // ==========================================
-      // SECTION 5: 3 DOUGHNUT CHARTS (SHARES)
-      // ==========================================
       const shareChannels = ['Email', 'Media (MMR)', 'Social'];
       const shareColors = ['#2563eb', '#10b981', '#a855f7'];
 
@@ -1256,7 +1532,7 @@
         }
       });
 
-      // 1. Registrations Share
+      // Total Registrations = 64 (Email) + 62 (Media) = 126
       const ctxRegShare = document.getElementById('chartRegShare');
       if (ctxRegShare) {
         new Chart(ctxRegShare, {
@@ -1264,7 +1540,7 @@
           data: {
             labels: shareChannels,
             datasets: [{
-              data: [116, 65, 0],
+              data: [64, 62, 0],
               backgroundColor: shareColors,
               borderWidth: 2,
               borderColor: '#ffffff'
@@ -1274,7 +1550,7 @@
         });
       }
 
-      // 2. Users Share
+      // Total Users = 2 (Email) + 6 (Media) = 8
       const ctxUsersShare = document.getElementById('chartUsersShare');
       if (ctxUsersShare) {
         new Chart(ctxUsersShare, {
@@ -1282,7 +1558,7 @@
           data: {
             labels: shareChannels,
             datasets: [{
-              data: [5, 3, 0],
+              data: [2, 6, 0],
               backgroundColor: shareColors,
               borderWidth: 2,
               borderColor: '#ffffff'
@@ -1292,7 +1568,7 @@
         });
       }
 
-      // 3. Revenue Share
+      // Total Revenue = 1345 (Email) + 670 (Media) = 2015
       const ctxRevShare = document.getElementById('chartRevenueShare');
       if (ctxRevShare) {
         new Chart(ctxRevShare, {
@@ -1300,13 +1576,214 @@
           data: {
             labels: shareChannels,
             datasets: [{
-              data: [800, 520, 0],
+              data: [1345, 670, 0],
               backgroundColor: shareColors,
               borderWidth: 2,
               borderColor: '#ffffff'
             }]
           },
           options: getDoughnutOptions(true)
+        });
+      }
+
+      // ==========================================
+      // SECTION 2: MMR DONUTS (LEADS: 1,436)
+      // ==========================================
+      const ctxLeads = document.getElementById('cplLeadShareChart');
+      if (ctxLeads) {
+        new Chart(ctxLeads.getContext('2d'), {
+          type: 'doughnut',
+          data: {
+            labels: ['FXM', 'ADM', 'LGL', 'CHA'],
+            datasets: [{
+              data: [773, 495, 163, 5],
+              backgroundColor: ['#00e676', '#1e60f2', '#a855f7', '#f59e0b'],
+              borderWidth: 2,
+              borderColor: '#ffffff',
+              hoverOffset: 3
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '74%',
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                padding: 10,
+                cornerRadius: 8,
+                titleFont: { family: "'Inter', sans-serif", size: 12, weight: 'bold' },
+                bodyFont: { family: "'Inter', sans-serif", size: 11 },
+                callbacks: {
+                  label: function(context) {
+                    const val = context.parsed;
+                    const total = 1436;
+                    const pct = ((val / total) * 100).toFixed(1);
+                    return ` ${context.label}: ${val.toLocaleString()} (${pct}%)`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      const ctxCpr = document.getElementById('cprPerformanceChart');
+      if (ctxCpr) {
+        new Chart(ctxCpr.getContext('2d'), {
+          type: 'doughnut',
+          data: {
+            labels: ['No Data'],
+            datasets: [{
+              data: [1],
+              backgroundColor: ['#e2e8f0'],
+              borderWidth: 0,
+              hoverOffset: 0
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '74%',
+            plugins: {
+              legend: { display: false },
+              tooltip: { enabled: false }
+            }
+          }
+        });
+      }
+
+      // ==========================================
+      // SECTION 3: EMAIL ADVERTISER CHARTS
+      // ==========================================
+      const advLabels = ['GameTime Digital', 'CHANCED', 'AFF 66', 'Basher Agency', 'Splash', 'ALL IN AFFILIATES', 'Acebet', 'CoinsRoyale', 'EPC'];
+
+      const ctxAdvSignUps = document.getElementById('chartAdvertiserSignUps');
+      if (ctxAdvSignUps) {
+        new Chart(ctxAdvSignUps.getContext('2d'), {
+          type: 'bar',
+          data: {
+            labels: advLabels,
+            datasets: [{
+              data: [41, 14, 5, 3, 1, 0, 0, 0, 0],
+              backgroundColor: '#d97706',
+              borderRadius: 6,
+              barThickness: 15
+            }]
+          },
+          options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                padding: 8,
+                cornerRadius: 6
+              }
+            },
+            scales: {
+              x: {
+                min: 0,
+                max: 50,
+                ticks: {
+                  stepSize: 10,
+                  font: { family: "'Inter', sans-serif", size: 11 },
+                  color: '#64748b'
+                },
+                grid: { color: '#f1f5f9' }
+              },
+              y: {
+                ticks: {
+                  font: { family: "'Inter', sans-serif", size: 11 },
+                  color: '#334155'
+                },
+                grid: { display: false }
+              }
+            }
+          }
+        });
+      }
+
+      const ctxAdvUsers = document.getElementById('chartAdvertiserUsers');
+      if (ctxAdvUsers) {
+        new Chart(ctxAdvUsers.getContext('2d'), {
+          type: 'bar',
+          data: {
+            labels: advLabels,
+            datasets: [{
+              data: [2, 0, 0, 0, 0, 0, 0, 0, 0],
+              backgroundColor: '#4f46e5',
+              borderRadius: 6,
+              barThickness: 15
+            }]
+          },
+          options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                padding: 8,
+                cornerRadius: 6
+              }
+            },
+            scales: {
+              x: {
+                min: 0,
+                max: 5,
+                ticks: {
+                  stepSize: 1,
+                  font: { family: "'Inter', sans-serif", size: 11 },
+                  color: '#64748b'
+                },
+                grid: { color: '#f1f5f9' }
+              },
+              y: {
+                ticks: {
+                  font: { family: "'Inter', sans-serif", size: 11 },
+                  color: '#334155'
+                },
+                grid: { display: false }
+              }
+            }
+          }
+        });
+      }
+
+      // ==========================================
+      // SECTION 4: SOCIAL REPORT CHART (BAR CHART)
+      // ==========================================
+      const ctxConversion = document.getElementById('conversionBarChart');
+      if (ctxConversion) {
+        new Chart(ctxConversion.getContext('2d'), {
+          type: 'bar',
+          data: {
+            labels: [],
+            datasets: [
+              { label: 'Registrations', data: [], backgroundColor: 'rgba(245, 158, 11, 0.85)', borderRadius: 6 },
+              { label: 'FTD/Users', data: [], backgroundColor: 'rgba(139, 92, 246, 0.85)', borderRadius: 6 }
+            ]
+          },
+          options: { 
+            responsive: true, 
+            maintainAspectRatio: false, 
+            plugins: { 
+              legend: { 
+                position: 'top',
+                labels: { font: { family: "'Inter', sans-serif", size: 11 } }
+              } 
+            },
+            scales: {
+              y: {
+                ticks: { font: { family: "'Inter', sans-serif", size: 11 } }
+              }
+            }
+          }
         });
       }
 
